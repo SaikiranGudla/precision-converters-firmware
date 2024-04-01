@@ -5,21 +5,21 @@ on:
 
 jobs:
   build-projects:
-    uses: ./.github/workflows/build-projects.yml
+    uses: ./.github/workflows/build-projects.yaml
     secrets: inherit
   check-versions:
-    uses: ./.github/workflows/check-versions.yml
+    uses: ./.github/workflows/check-versions.yaml
     needs: [build-projects]
     secrets: inherit
   lint:
-    uses: ./.github/workflows/lint
+    uses: ./.github/workflows/lint.yaml
     needs: [check-versions]
     secrets: inherit 
   documentation:
-    uses: ./.github/workflows/documentation
+    uses: ./.github/workflows/documentation.yaml
     needs: [lint]
     secrets: inherit
   deploy-doc:
-    uses: ./.github/workflows/deploy.yml
+    uses: ./.github/workflows/deploy-doc.yaml
     needs: [documentation]
     secrets: inherit
