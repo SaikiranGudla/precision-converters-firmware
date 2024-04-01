@@ -28,6 +28,12 @@ jobs:
           popd
 
           echo "Sphinx was generated successfully!"
+
+      - name: Store the generated doc
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-sphinx
+          path: doc/sphinx/build
           
       - name: Doxygen build
         run: |
@@ -40,3 +46,9 @@ jobs:
           popd
 
           echo "Doxygen was generated successfully!"
+
+      - name: Store the generated doc
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-doxygen
+          path: doc/doxygen/build/html

@@ -13,7 +13,7 @@ jobs:
     uses: ./.github/workflows/lint.yaml
     needs: [check-versions]
     secrets: inherit 
-  documentation:
-    uses: ./.github/workflows/documentation.yaml
+  build-doc:
+    uses: ./.github/workflows/build-doc.yaml
     needs: [lint]
     secrets: inherit
