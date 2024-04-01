@@ -3,7 +3,7 @@ name: Check versions
 # and in git submodules under libraries/* used to build with no-OS. To make
 # sure the two stay in sync, compare the versions in both and make sure they
 # are the same
-on: [push]
+on: workflow_call
 jobs:
   build:
     runs-on: ubuntu-latest
