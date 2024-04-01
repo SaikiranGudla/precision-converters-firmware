@@ -1,7 +1,7 @@
 Code Styles
 -----------
 
-To apply style guidelines, `astyle <https://astyle.sourceforge.net/>`_ is used.
+To apply style sguidelines, `astyle <https://astyle.sourceforge.net/>`_ is used.
 
 For the source code in the repository, the following configuration should be used
 through astyle_config file:
