@@ -54,7 +54,7 @@ jobs:
   deploy-doc:
     runs-on: ubuntu-latest
     needs: build-docs
-    if: github.ref == 'refs/branch/main'
+    if: github.ref == 'refs/heads/workflow_imp_2'
     steps:
     - uses: actions/checkout@v4
       with:
