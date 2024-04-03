@@ -22,12 +22,14 @@ jobs:
           python -m pip install sphinx-toolbox
           pip install sphinx myst_parser
           sudo apt-get install doxygen graphviz -y
+
       - name: Sphinx build
         run: |
           pushd doc/sphinx
           sphinx-build ./ build
           popd
           echo "Sphinx was generated successfully!"
+
       - name: Store the generated doc
         uses: actions/upload-artifact@v4
         with:
@@ -44,6 +46,7 @@ jobs:
           cd ..
           popd
           echo "Doxygen was generated successfully!"
+
       - name: Store the generated doc
         uses: actions/upload-artifact@v4
         with:
@@ -52,7 +55,7 @@ jobs:
 
   deploy-doc:
     runs-on: ubuntu-latest
-    needs: docs
+    needs: build-docs
     if: github.event_name == 'push'
     steps:
     - uses: actions/checkout@v4
@@ -83,6 +86,7 @@ jobs:
         git config --global user.name "$author"
         git config --global user.email "$email"
         git commit -m "deploy: $commit" --allow-empty
+        
     - name: Push to gh-pages
       run: >-
         git push origin gh-pages:gh-pages
