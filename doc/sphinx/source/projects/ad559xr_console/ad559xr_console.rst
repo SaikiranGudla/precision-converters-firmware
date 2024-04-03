@@ -23,7 +23,7 @@ Supported Hardware
 Introduction
 ============
 
-The AD5592R/ AD5593R offer 8-Channel, 12-Bit, configurable ADC/DAC with on-chip reference and either SPI (AD5592R) or I2C interfaces (AD5593R). This page gives an overview of using the AD5592R/AD5593R firmware example with SDP-K1 EVAL board. The firmware example comprises 3 layers of software (from top to bottom): Console Application Layer, Device No-OS Layer and Platform Drivers (Mbed-OS) layer.
+The AD5592R/ AD5593R offer 8-Channel, 12-Bit, configurable ADC/DAC with on-chip reference and either SPI (AD5592R) or I2C interfaces (AD5593R). This page gives an overview of using the AD5592R/AD5593R firmware examples with SDP-K1 EVAL board. The firmware example comprises 3 layers of software (from top to bottom): Console Application Layer, Device No-OS Layer and Platform Drivers (Mbed-OS) layer.
 
    .. image:: /source/projects/ad559xr_console/ad5592r_software_architecture.jpg
       :width: 200
