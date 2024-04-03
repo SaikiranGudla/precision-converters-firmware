@@ -5,7 +5,7 @@ Build Guide
 .. collapse:: Build Prerequisites
    :open:
 
-      Prior to building a firmware project, it is required to set up an environment so 
+      Priors to building a firmware project, it is required to set up an environment so 
       that the build process may find the necessary tools (compiler, linker, SDK etc.). 
       Use the following steps to prepare your environment for building firmware projects 
       for respective platform.
