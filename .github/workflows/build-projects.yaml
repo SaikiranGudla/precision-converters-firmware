@@ -78,6 +78,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    needs: [check-versions, lint]
     strategy:
       matrix:
         project:
