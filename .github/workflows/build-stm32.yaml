@@ -44,6 +44,7 @@ jobs:
     # Pull the container from the private repository
     container:
       image: ghcr.io/saikirangudla/precision-converters-firmware:0.0.1
+      options: --user root
       #credentials:
        # username: ${{ secrets.ARTIFACT_USERNAME }}
         #password: ${{ secrets.ARTIFACT_PASSWORD }}
