@@ -43,10 +43,10 @@ jobs:
           
     # Pull the container from the private repository
     container:
-      image: artifactory.analog.com:6578/precisionconverters-docker/stm32_platform:0.0.4
-      credentials:
-        username: ${{ secrets.ARTIFACT_USERNAME }}
-        password: ${{ secrets.ARTIFACT_PASSWORD }}
+      image: ghcr.io/saikirangudla/precision-converters-firmware:0.0.1
+      #credentials:
+       # username: ${{ secrets.ARTIFACT_USERNAME }}
+        #password: ${{ secrets.ARTIFACT_PASSWORD }}
 
     steps:
       - name: Checkout repository
