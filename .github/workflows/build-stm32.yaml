@@ -52,8 +52,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
+        #with:
+          #submodules: recursive
 
       - name: Build with no-OS
         run: |
@@ -68,12 +68,22 @@ jobs:
           echo "Listing /opt directory:"
           ls -la /opt
           
+          git config --global --add safe.directory ${PWD}
+          
           Xvfb :99 -screen 0 1000x1000x16 -nolisten tcp -nolisten unix &
           
           echo "Done Xvfb"
           
-          export DISPLAY=:99 && cd ${PWD}/projects/ad405x_iio && make PLATFORM=stm32
+          #export DISPLAY=:99 && cd ${PWD}/projects/ad405x_iio && make PLATFORM=stm32
           
           echo "Done final"
+          
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: test.artifacts
+          # The output artifacts are BLE_p2pServer.elf, BLE_p2pServer.map, etc.
+          # Use a wildcard pattern to get them all
+          path: projects/ad405x_iio/app
           
 
