@@ -167,6 +167,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9dffdb1f5a800e5a964833e338fb762f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pl__gui__views_8c.html#a9dffdb1f5a800e5a964833e338fb762f">pl_gui_cnv_code_to_straight_binary</a> (uint32_t code, uint8_t chn)</td></tr>
 <tr class="memdesc:a9dffdb1f5a800e5a964833e338fb762f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert input code to straight binary data.  <a href="pl__gui__views_8c.html#a9dffdb1f5a800e5a964833e338fb762f">More...</a><br /></td></tr>
 <tr class="separator:a9dffdb1f5a800e5a964833e338fb762f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3657afe85a60b3d439755f324f4f6dd"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pl__gui__views_8c.html#af3657afe85a60b3d439755f324f4f6dd">pl_gui_create_power_up_view</a> (lv_obj_t *parent, struct <a class="el" href="structpl__gui__init__param.html">pl_gui_init_param</a> *param)</td></tr>
+<tr class="memdesc:af3657afe85a60b3d439755f324f4f6dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create pocket lab GUI power-up view.  <a href="pl__gui__views_8c.html#af3657afe85a60b3d439755f324f4f6dd">More...</a><br /></td></tr>
+<tr class="separator:af3657afe85a60b3d439755f324f4f6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18720f4b283be5e0b8743045bd76a9a8"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pl__gui__views_8c.html#a18720f4b283be5e0b8743045bd76a9a8">pl_gui_create_attributes_view</a> (lv_obj_t *parent, struct <a class="el" href="structpl__gui__init__param.html">pl_gui_init_param</a> *param)</td></tr>
 <tr class="memdesc:a18720f4b283be5e0b8743045bd76a9a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create pocket lab GUI attributes view.  <a href="pl__gui__views_8c.html#a18720f4b283be5e0b8743045bd76a9a8">More...</a><br /></td></tr>
 <tr class="separator:a18720f4b283be5e0b8743045bd76a9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -440,7 +443,8 @@ Variables</h2></td></tr>
 <p>Create pocket lab GUI about view. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent[in]</td><td>- pointer to about view instance </td></tr>
+    <tr><td class="paramname">parent[in]</td><td>- tabview instance </td></tr>
+    <tr><td class="paramname">param[in]</td><td>- pointer to pocket lab gui init params </td></tr>
   </table>
   </dd>
 </dl>
@@ -477,7 +481,8 @@ Variables</h2></td></tr>
 <p>Create pocket lab GUI analysis view. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent[in]</td><td>- pointer to analysis view instance </td></tr>
+    <tr><td class="paramname">parent[in]</td><td>- tabview instance </td></tr>
+    <tr><td class="paramname">param[in]</td><td>- pointer to pocket lab gui init params </td></tr>
   </table>
   </dd>
 </dl>
@@ -514,7 +519,8 @@ Variables</h2></td></tr>
 <p>Create pocket lab GUI attributes view. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent[in]</td><td>- pointer to attributes view instance </td></tr>
+    <tr><td class="paramname">parent[in]</td><td>- tabview instance </td></tr>
+    <tr><td class="paramname">param[in]</td><td>- pointer to pocket lab gui init params </td></tr>
   </table>
   </dd>
 </dl>
@@ -551,7 +557,8 @@ Variables</h2></td></tr>
 <p>Create pocket lab GUI data capture view. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent[in]</td><td>- pointer to data capture view instance </td></tr>
+    <tr><td class="paramname">parent[in]</td><td>- tabview instance </td></tr>
+    <tr><td class="paramname">param[in]</td><td>- pointer to pocket lab gui init params </td></tr>
   </table>
   </dd>
 </dl>
@@ -588,7 +595,46 @@ Variables</h2></td></tr>
 <p>Create pocket lab GUI DMM view. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent[in]</td><td>- pointer to DMM view instance </td></tr>
+    <tr><td class="paramname">parent[in]</td><td>- tabview instance </td></tr>
+    <tr><td class="paramname">param[in]</td><td>- pointer to pocket lab gui init params </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise </dd></dl>
+
+</div>
+</div>
+<a id="af3657afe85a60b3d439755f324f4f6dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3657afe85a60b3d439755f324f4f6dd">&#9670;&nbsp;</a></span>pl_gui_create_power_up_view()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t pl_gui_create_power_up_view </td>
+          <td>(</td>
+          <td class="paramtype">lv_obj_t *&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structpl__gui__init__param.html">pl_gui_init_param</a> *&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create pocket lab GUI power-up view. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent[in]</td><td>- tabview instance </td></tr>
+    <tr><td class="paramname">param[in]</td><td>- pointer to pocket lab gui init params </td></tr>
   </table>
   </dd>
 </dl>
@@ -625,7 +671,8 @@ Variables</h2></td></tr>
 <p>Create pocket lab GUI register view. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent[in]</td><td>- pointer to register view instance </td></tr>
+    <tr><td class="paramname">parent[in]</td><td>- tabview instance </td></tr>
+    <tr><td class="paramname">param[in]</td><td>- pointer to pocket lab gui init params </td></tr>
   </table>
   </dd>
 </dl>

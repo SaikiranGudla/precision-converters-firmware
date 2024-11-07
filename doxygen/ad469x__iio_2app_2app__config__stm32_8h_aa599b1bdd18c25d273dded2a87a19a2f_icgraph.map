@@ -1,0 +1,4 @@
+<map id="receivecomplete_callback" name="receivecomplete_callback">
+<area shape="rect" id="node1" title="Callback function to flag the capture of number of requested samples." alt="" coords="200,5,392,32"/>
+<area shape="rect" id="node2" href="$ad405x__iio_2app_2app__config__stm32_8c.html#a7256d80c59f9d4eafcebc79f1b73ba72" title="Initialize the STM32 system peripherals." alt="" coords="5,5,152,32"/>
+</map>

@@ -1,47 +1,194 @@
-
-
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>IIO Data Streaming for DACs &#8212; precision-converters-firmware  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bizstyle.css?v=532c1bf3" />
-    
+    <title>IIO Data Streaming for DACs &#8212; Precision Converters Firmware  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=95305861" />
     <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/bizstyle.js"></script>
+    <script defer="" src="../../_static/app.umd.js?v=c93eadd1"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <!--[if lt IE 9]>
-    <script src="_static/css3-mediaqueries.js"></script>
-    <![endif]-->
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">precision-converters-firmware  documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">IIO Data Streaming for DACs</a></li> 
-      </ul>
-    </div>  
+   
+  
+  <meta name="global_root" content="../../../">
+  <meta name="repo" content="precision-converters-firmware">
+  
 
-    <div class="document">
+
+<style>
+  body {
+    
+  }
+
+  body.dark {
+    
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body:not(.light) {
+      
+    }
+  }
+</style>
+  </head><body>
+  <div class="banner"></div>
+  <input type="checkbox" id="input-show-toc">
+  <input type="checkbox" id="input-show-localtoc">
+  <input type="checkbox" id="input-show-repotoc">
+
+  
+  <div class="search-area">
+    <form action="" method="get">
+      <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
+      <button value="search" class="icon"></button>
+      <span id="search-progress"></span>
+    </form>
+  </div>
+  
+
+  <header>
+    <div id="left">
+      <label id="show-sidebar" class="icon" for="input-show-toc" title="Show/hide index"></label>
+    </div>
+    <div id="right">
+      <span>
+        <a id="logo-org" href="https://analog.com"></a>
+        <div class="vertical-divider"></div>
+        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        <a id="logo" href="../../index.html">
+          <div>Precision Converters Firmware</div>
+        </a>
+      </span>
+      <span class="reverse">
+        <label id="show-localtoc" class="icon" for="input-show-localtoc" title="Show/hide contents"></label>
+      </span>
+    </div>
+  </header>
+
+
+  <div class="repotoc-tree overlay">
+    <root>
+  <a href="../../../documentation/index.html">System Level</a>
+  <a href="../../../hdl/index.html">HDL</a>
+  <a href="../../../testbenches/index.html">HDL Testbenches</a>
+  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
+  <a href="../../../libiio/index.html">libiio</a>
+  <a href="../../../no-OS/index.html">no-OS</a>
+  <a href="../../index.html" class="current">Precision Converters Firmware</a>
+  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
+  <a href="../../../scopy/index.html">Scopy</a>
+  <a href="../../../doctools/index.html">Doctools</a>
+</root>
+
+  </div>
+    <div class="localtoc">
+      <div class="tocwrapper">
+        <div>
+          <div class="localtoc-header">On this page</div>
+          <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
+        </div>
+        <nav>
+          <ul>
+<li><a class="reference internal" href="#">IIO Data Streaming for DACs</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#data-streaming-to-iio-device">Data Streaming to IIO Device</a></li>
+<li><a class="reference internal" href="#creating-binary-files-for-data-streaming">Creating binary files for data streaming</a></li>
+<li><a class="reference internal" href="#loading-and-streaming-the-data">Loading and Streaming the Data</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#limitations-of-data-streaming-using-iio-application">Limitations of Data Streaming Using IIO Application</a></li>
+</ul>
+
+        </nav>
+      </div>
+    </div>
+
+  
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+    <a id="no-logo" href="../../index.html">
+      Precision Converters Firmware
+    </a><input id="input-switch-toc" type="checkbox">
+<label id="show-repotoc" for="input-switch-toc">
+All content
+</label>
+<label id="show-toc" for="input-switch-toc">
+Content on this topic
+</label>
+<div class="repotoc-tree">
+  <root>
+  <a href="../../../documentation/index.html">System Level</a>
+  <a href="../../../hdl/index.html">HDL</a>
+  <a href="../../../testbenches/index.html">HDL Testbenches</a>
+  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
+  <a href="../../../libiio/index.html">libiio</a>
+  <a href="../../../no-OS/index.html">no-OS</a>
+  <a href="../../index.html" class="current">Precision Converters Firmware</a>
+  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
+  <a href="../../../scopy/index.html">Scopy</a>
+  <a href="../../../doctools/index.html">Doctools</a>
+</root>
+
+</div>
+<div class="toc-tree">
+  <html>
+  <body><ul>
+<li class="toctree-l1"><a class="reference internal" href="../build/project_build.html">Build Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_style.html">Code Styles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to PCFW Repository</a></li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1" id="toctree-collapse-1"/><div class="collapse"><a class="reference internal" href="../projects/index.html">Firmware Applications</a><label for="toctree-collapse-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad2s1210_iio/ad2s1210_iio.html">AD2S1210 IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad355xr_iio/ad355xr_iio.html">AD355XR IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad405x_iio/ad405x_iio.html">AD405x IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad4130_iio/ad4130_iio.html">AD4130 IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad4170_iio/ad4170_iio.html">AD4170 IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad4696_iio/ad4696_iio.html">AD4696 IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad559xr_console/ad559xr_console.html">AD559XR Console Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad5754r_iio/ad5754r_iio.html">AD5754R/CN0586 IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad579x_iio/ad579x_iio.html">AD579X IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad590_console/ad590_console.html">AD590 Console Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad5933_console/ad5933_console.html">AD5933 Console Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad7124_console/ad7124_console.html">AD7124 Console Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad7124_iio/ad7124_iio.html">AD7124 IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad7124_temperature-measure/ad7124_temperature-measure.html">AD7124 Temperature Measure Firmware Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad7134_iio/ad7134_iio.html">AD7134 IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad717x_console/ad717x_console.html">AD717x / AD411x Console Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad717x_iio/ad717x_iio.html">AD717x / AD411x IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad719x_iio/ad719x_iio.html">AD719x IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad738x_iio/ad738x_iio.html">AD738x IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad7606_iio/ad7606_iio.html">AD7606 IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad7689_iio/ad7689_iio.html">AD7689 IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad77681_iio/ad77681_iio.html">AD7768-1 IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ad777x_iio/ad777x_iio.html">AD777x IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/adt7420_console/adt7420_console.html">ADT7420 Console Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ltc268x_console/ltc268x_console.html">LTC268x Console Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ltc2672_iio/ltc2672_iio.html">LTC2672 IIO Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/nanodac_console/nanodac_console.html">nanoDAC+ Console Application</a></li>
+</ul>
+</li>
+</ul>
+</body>
+</html>
+
+</div>
+        </div>
+      </div>
+
+  <div class="document">
       <div class="documentwrapper">
-        <div class="bodywrapper">
+        <div class="bodywrapper" id="top-anchor">
           <div class="body" role="main">
             
   <section id="iio-data-streaming-for-dacs">
-<h1>IIO Data Streaming for DACs<a class="headerlink" href="#iio-data-streaming-for-dacs" title="Link to this heading">¶</a></h1>
+<h1>IIO Data Streaming for DACs<a class="headerlink" href="#iio-data-streaming-for-dacs" title="Link to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>IIO clients can be used to load and stream data to DAC devices using an IIO
 firmware application developed for that device. Using this firmware, a user
 can configure various settings on the device and load the data using the DAC
@@ -58,7 +205,7 @@ enabled, the buffer repeats itself, and the same data is streamed over and over
 indefinitely until stopped.</p>
 </section>
 <section id="data-streaming-to-iio-device">
-<h2>Data Streaming to IIO Device<a class="headerlink" href="#data-streaming-to-iio-device" title="Link to this heading">¶</a></h2>
+<h2>Data Streaming to IIO Device<a class="headerlink" href="#data-streaming-to-iio-device" title="Link to this heading">#</a></h2>
 <p>The DAC Data Manager tab on the IIO Oscilloscope allows streaming data to supported iio devices.
 The input data file can be a binary file (.bin) or a MAT file (.mat).</p>
 <div class="admonition note">
@@ -68,7 +215,7 @@ the IIO Oscilloscope application must be upgraded to the most recent versions.</
 </div>
 </section>
 <section id="creating-binary-files-for-data-streaming">
-<h2>Creating binary files for data streaming<a class="headerlink" href="#creating-binary-files-for-data-streaming" title="Link to this heading">¶</a></h2>
+<h2>Creating binary files for data streaming<a class="headerlink" href="#creating-binary-files-for-data-streaming" title="Link to this heading">#</a></h2>
 <p><a class="reference internal" href="../python/python.html"><span class="doc">pyadi-iio: Python interfaces</span></a>
 The PyADI module allows users to create binary data files from the input data using the
 tx class. The CLI (Command Line Interface) script adistream.py allows the user to
@@ -76,16 +223,18 @@ create various types of waveforms like sine, triangular, pwm, etc and store them
 binary file.</p>
 </section>
 <section id="loading-and-streaming-the-data">
-<h2>Loading and Streaming the Data<a class="headerlink" href="#loading-and-streaming-the-data" title="Link to this heading">¶</a></h2>
+<h2>Loading and Streaming the Data<a class="headerlink" href="#loading-and-streaming-the-data" title="Link to this heading">#</a></h2>
 <p>On the IIO Oscilloscope, open the DAC Data Manager tab as indicated below
 after connecting to the iio device.</p>
 <blockquote>
-<div><a class="reference internal image-reference" href="../../_images/iio_osc_data_manager.jpg"><img alt="../../_images/iio_osc_data_manager.jpg" src="../../_images/iio_osc_data_manager.jpg" style="width: 600px;" /></a>
+<div><a class="reference internal image-reference" href="../../_images/iio_osc_data_manager.jpg"><img alt="../../_images/iio_osc_data_manager.jpg" src="../../_images/iio_osc_data_manager.jpg" style="width: 600px;" />
+</a>
 </div></blockquote>
 <p>Click on the File Selection section to input the wavefrom data binary file created.
 Copy the binary file path and paste it in the Location section, then click Open.</p>
 <blockquote>
-<div><a class="reference internal image-reference" href="../../_images/iio_osc_file_section.jpg"><img alt="../../_images/iio_osc_file_section.jpg" src="../../_images/iio_osc_file_section.jpg" style="width: 600px;" /></a>
+<div><a class="reference internal image-reference" href="../../_images/iio_osc_file_section.jpg"><img alt="../../_images/iio_osc_file_section.jpg" src="../../_images/iio_osc_file_section.jpg" style="width: 600px;" />
+</a>
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -96,7 +245,8 @@ enabled, and otherwise may result in incorrrect data being streamed.</p>
 or disable cyclic streaming of data. Click the Load button to load the data. The
 message “Waveform loaded successfully” shows up if the data is loaded correctly.</p>
 <blockquote>
-<div><a class="reference internal image-reference" href="../../_images/iio_osc_load_data.jpg"><img alt="../../_images/iio_osc_load_data.jpg" src="../../_images/iio_osc_load_data.jpg" style="width: 600px;" /></a>
+<div><a class="reference internal image-reference" href="../../_images/iio_osc_load_data.jpg"><img alt="../../_images/iio_osc_load_data.jpg" src="../../_images/iio_osc_load_data.jpg" style="width: 600px;" />
+</a>
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -110,7 +260,7 @@ button needs to be clicked to end the data streaming.</p>
 </section>
 </section>
 <section id="limitations-of-data-streaming-using-iio-application">
-<h1>Limitations of Data Streaming Using IIO Application<a class="headerlink" href="#limitations-of-data-streaming-using-iio-application" title="Link to this heading">¶</a></h1>
+<h1>Limitations of Data Streaming Using IIO Application<a class="headerlink" href="#limitations-of-data-streaming-using-iio-application" title="Link to this heading">#</a></h1>
 <p><strong>DAC Sampling/Update Rate:</strong></p>
 <p>The sampling rate or update rate defines the maximum rate/speed at which data can
 be loaded and updated onto the DAC output using the IIO firmware application. For
@@ -139,68 +289,33 @@ firmware returns negative error code to IIO client which then terminates the
 data streaming request.</p>
 <p>Buffer size can be increased to larger value by making use of internal/external RAMs.
 For example, SDP-K1 MCU board has 16Mbytes of onboard SDRAM, which allows larger data
-buffer size in the firmware. By enabling SDRAM in the SDP-K1 targeted Mbed firmware
-(app_config.h file), the data buffer size can be increased to 16Mbytes.</p>
+buffer size in the firmware. By enabling SDRAM in the SDP-K1
+(using the macro in app_config.h file), the data buffer size can be increased to 16Mbytes.</p>
 </section>
 
 
-            <div class="clearer"></div>
           </div>
+              <div class="related">
+                &nbsp;
+    <div></div>
+    <div></div>
+              </div>
+          
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../index.html">
-              <img class="logo" src="../../_static/adi_logo.png" alt="Logo"/>
-            </a></p>
-  <div>
-    <h3><a href="../../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">IIO Data Streaming for DACs</a><ul>
-<li><a class="reference internal" href="#introduction">Introduction</a></li>
-<li><a class="reference internal" href="#data-streaming-to-iio-device">Data Streaming to IIO Device</a></li>
-<li><a class="reference internal" href="#creating-binary-files-for-data-streaming">Creating binary files for data streaming</a></li>
-<li><a class="reference internal" href="#loading-and-streaming-the-data">Loading and Streaming the Data</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#limitations-of-data-streaming-using-iio-application">Limitations of Data Streaming Using IIO Application</a></li>
-</ul>
-
   </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../../_sources/source/iio_osc/data_streaming.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">precision-converters-firmware  documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">IIO Data Streaming for DACs</a></li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright 2023, Analog Devices Inc..
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
-    </div>
+
+  <div id="vertical-border"></div>
+
+  <label id="cancel-area-show-toc" for="input-show-toc"></label>
+  <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>
+    <footer>
+      &#169;2023-2024, Analog Devices Inc.
+      
+      |
+      Made with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+      &amp; <a href="https://github.com/analogdevicesinc/doctools">Doctools</a>
+      
+    </footer>
   </body>
 </html>
