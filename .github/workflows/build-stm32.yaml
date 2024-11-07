@@ -60,8 +60,16 @@ jobs:
           # Check contents of the root directory
           echo "Listing root directory:"
           ls -la /
-
+          
+          echo "Check pwd"
+          pwd
+          
           # Check contents of /opt directory
           echo "Listing /opt directory:"
           ls -la /opt
+          
+          Xvfb :99 -screen 0 1000x1000x16 -nolisten tcp -nolisten unix &
+          
+          export DISPLAY=:99 && cd /home/jenkins/precision-converters-firmware/projects/ad405x_iio && make PLATFORM=stm32
+          
 
