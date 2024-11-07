@@ -1,0 +1,66 @@
+name: Build projects
+on:
+  push:
+    branches:
+     - main
+  pull_request:
+
+  # enable manual triggering
+  workflow_dispatch:
+  
+jobs:
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update no-OS submodule
+        run: |
+          git submodule update --init libraries/no-OS
+
+      - name: Run astyle on source code
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y astyle fd-find
+          set -e
+          formatted=$(fdfind -e c -e h . projects | xargs astyle --formatted --options=libraries/no-OS/ci/astyle_config)
+          if [[ ! -z "${formatted}" ]]; then
+            echo "ERROR: The following files were formatted by astyle:"
+            echo "${formatted}"
+            exit 1
+          fi
+          echo "SUCCESS: No files were formatted by astyle"
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [lint]
+    strategy:
+      matrix:
+        project:
+          - ltc2672_iio
+          
+    # Pull the container from the private repository
+    container:
+      image: artifactory.analog.com:6578/precisionconverters-docker/stm32_platform:0.0.4
+      credentials:
+        username: ${{ secrets.ARTIFACT_USERNAME }}
+        password: ${{ secrets.ARTIFACT_PASSWORD }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Build with no-OS
+        run: |
+          # Check contents of the root directory
+          echo "Listing root directory:"
+          ls -la /
+
+          # Check contents of /opt directory
+          echo "Listing /opt directory:"
+          ls -la /opt
+
