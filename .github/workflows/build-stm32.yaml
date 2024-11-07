@@ -70,6 +70,10 @@ jobs:
           
           Xvfb :99 -screen 0 1000x1000x16 -nolisten tcp -nolisten unix &
           
-          export DISPLAY=:99 && cd /home/jenkins/precision-converters-firmware/projects/ad405x_iio && make PLATFORM=stm32
+          echo "Done Xvfb"
+          
+          export DISPLAY=:99 && cd ${PWD}/projects/ad405x_iio && make PLATFORM=stm32
+          
+          echo "Done final"
           
 
