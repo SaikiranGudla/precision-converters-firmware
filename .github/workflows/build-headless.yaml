@@ -39,12 +39,12 @@ jobs:
     strategy:
       matrix:
         project:
-          - ltc2672_iio
+          - ad405x_iio
           
     # Pull the container from the private repository
     container:
-      image: ghcr.io/saikirangudla/precision-converters-firmware:0.0.1
-      options: --user root
+      image: ghcr.io/noahp/stm32wba55-example:2024-08-01
+      #options: --user root
       #credentials:
        # username: ${{ secrets.ARTIFACT_USERNAME }}
         #password: ${{ secrets.ARTIFACT_PASSWORD }}
@@ -52,10 +52,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        #with:
-          #submodules: recursive
+        with:
+          submodules: recursive
 
-      - name: Build with no-OS
+      - name: Build project
         run: |
           # Check contents of the root directory
           echo "Listing root directory:"
@@ -68,22 +68,22 @@ jobs:
           echo "Listing /opt directory:"
           ls -la /opt
           
-          git config --global --add safe.directory ${PWD}
-          
-          Xvfb :99 -screen 0 1000x1000x16 -nolisten tcp -nolisten unix &
-          
-          echo "Done Xvfb"
-          
-          #export DISPLAY=:99 && cd ${PWD}/projects/ad405x_iio && make PLATFORM=stm32
-          
-          echo "Done final"
+          /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
+            -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
+            -data /tmp/stm-workspace \
+            -import "projects/ad405x_iio/STM32"
+
+          /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
+            -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
+            -data /tmp/stm-workspace \
+            -build ad405x_iio/Debug
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: test.artifacts
+          name: ad405x
           # The output artifacts are BLE_p2pServer.elf, BLE_p2pServer.map, etc.
           # Use a wildcard pattern to get them all
-          path: projects/ad405x_iio/app
+          path: projects/ad405x_iio/STM32/Debug/ad405x_iio.bin
           
 
