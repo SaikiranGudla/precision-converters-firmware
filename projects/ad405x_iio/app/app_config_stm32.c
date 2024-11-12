@@ -22,6 +22,18 @@
 /************************ Macros/Constants ************************************/
 /******************************************************************************/
 
+/* Timer channel output */
+#define TIM_CCMR_CCS_OUTPUT 0
+
+/* Compare pulse as trigger event */
+#define TIM_CR2_MMS_COMPARE_PULSE 3
+
+/* Trigger mode as slave mode */
+#define TIM_SMCR_SMS_TRIGGER 6
+
+/* TIM1 as ITR source */
+#define TIM_ITR_SOURCE 0
+
 /******************************************************************************/
 /******************** Variables and User Defined Data Types *******************/
 /******************************************************************************/
@@ -404,30 +416,28 @@ void tim1_config(void)
 {
 	TIM1->EGR = TIM_EGR_UG;// Generate update event
 
-	TIM1->CR2 &= ~TIM_CR2_MMS;
-	TIM1->CR2 |= TIM_TRGO_UPDATE; // Select Update as trigger event
+	TIM1->CR2 = 0
+		    | (TIM_CR2_MMS_COMPARE_PULSE *
+		       TIM_CR2_MMS_0); // Select compare pulse as trigger event
 }
 
-/* Configure TIM8 for slave mode operation, one-pulse mode
- * and to generate DMA requests. */
+/**
+ * @brief Configure Tx Trigger timer
+ * @return None
+ */
 void tim8_config(void)
 {
 	TIM8->RCR = 0;
-
-	TIM8->CCMR1 &= ~TIM_CCMR1_CC1S_Msk;
-
+	TIM8->CCMR1 = 0
+		      | (TIM_CCMR_CCS_OUTPUT * TIM_CCMR1_CC1S_0); // Output compare
 	TIM8->EGR = TIM_EGR_UG;// Generate update event
+	TIM8->SMCR = 0
+		     | (TIM_ITR_SOURCE * TIM_SMCR_TS_0) // Select TIM1 as TRGI source
+		     | (TIM_SMCR_SMS_TRIGGER *
+			TIM_SMCR_SMS_0); // Set trigger mode for slave controller
 
-	TIM8->CCMR1 &= ~TIM_CCMR1_CC1S_Msk; // Output compare
-
-	TIM8->SMCR &= ~TIM_SMCR_TS_Msk; // Select TIM1 as TRGI source
-
-	TIM8->SMCR &= ~TIM_SMCR_SMS_Msk;
-	TIM8->SMCR |= TIM_SMCR_SMS_1 |
-		      TIM_SMCR_SMS_2; // Set trigger mode for slave controller
-
-	TIM8->CR1 &= ~TIM_CR1_OPM_Msk;
-	TIM8->CR1 |= TIM_CR1_OPM; // Enable one pulse mode
+	TIM8->CR1 = 0
+		    | (1 * TIM_CR1_OPM); // Enable one pulse mode
 
 	TIM8->DIER |= TIM_DIER_CC1DE; // Generate DMA request after overflow
 }
