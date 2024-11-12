@@ -1,0 +1,6 @@
+<map id="HAL_NVIC_DisableIRQ" name="HAL_NVIC_DisableIRQ">
+<area shape="rect" id="node1" title=" " alt="" coords="216,56,383,83"/>
+<area shape="rect" id="node2" href="$group___i2_c___exported___functions___group1.html#ga2ec8d9b09854c732e2feed549278f048" title="I2C MSP De&#45;Initialization This function freeze the hardware resources used in this example." alt="" coords="12,5,161,32"/>
+<area shape="rect" id="node3" href="$group___u_a_r_t___exported___functions___group1.html#ga718f39804e3b910d738a0e1e46151188" title="UART MSP De&#45;Initialization This function freeze the hardware resources used in this example." alt="" coords="5,56,168,83"/>
+<area shape="rect" id="node4" href="$ad405x__iio_2app_2app__config__stm32_8c.html#a7256d80c59f9d4eafcebc79f1b73ba72" title="Initialize the STM32 system peripherals." alt="" coords="13,107,160,133"/>
+</map>

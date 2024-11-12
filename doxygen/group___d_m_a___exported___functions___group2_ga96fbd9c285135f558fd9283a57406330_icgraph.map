@@ -1,0 +1,4 @@
+<map id="HAL_DMA_Start" name="HAL_DMA_Start">
+<area shape="rect" id="node1" title=" " alt="" coords="229,5,353,32"/>
+<area shape="rect" id="node2" href="$ad355xr__iio_2app_2app__config__stm32_8c.html#a7b620d26aa25fd3cfeee7d28b59a4c0c" title="Enables SPI DMA to move data from iio buffer to SPI TX buffer." alt="" coords="5,5,181,32"/>
+</map>

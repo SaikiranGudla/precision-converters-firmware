@@ -1,0 +1,69 @@
+<map id="/home/runner/work/precision&#45;converters&#45;firmware/precision&#45;converters&#45;firmware/projects/ad405x_iio/STM32/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h" name="/home/runner/work/precision&#45;converters&#45;firmware/precision&#45;converters&#45;firmware/projects/ad405x_iio/STM32/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h">
+<area shape="rect" id="node1" title="CMSIS STM32F4xx Device Peripheral Access Layer Header File." alt="" coords="5777,5,6085,91"/>
+<area shape="rect" id="node2" href="$system__stm32f4xx_8c.html" title="CMSIS Cortex&#45;M4 Device Peripheral Access Layer System Source File." alt="" coords="3714,139,3969,224"/>
+<area shape="rect" id="node3" href="$stm32f4xx__hal__def_8h.html" title="This file contains HAL common defines, enumeration, macros and structures definitions." alt="" coords="3993,139,4269,224"/>
+<area shape="rect" id="node55" href="$stm32f4xx__ll__bus_8h.html" title="Header file of BUS LL module." alt="" coords="4293,139,4569,224"/>
+<area shape="rect" id="node56" href="$stm32f4xx__ll__cortex_8h.html" title="Header file of CORTEX LL module." alt="" coords="4593,139,4869,224"/>
+<area shape="rect" id="node57" href="$stm32f4xx__ll__dma_8h.html" title="Header file of DMA LL module." alt="" coords="4893,139,5169,224"/>
+<area shape="rect" id="node58" href="$stm32f4xx__ll__exti_8h.html" title="Header file of EXTI LL module." alt="" coords="5193,139,5469,224"/>
+<area shape="rect" id="node59" href="$stm32f4xx__ll__gpio_8h.html" title="Header file of GPIO LL module." alt="" coords="5493,139,5769,224"/>
+<area shape="rect" id="node60" href="$stm32f4xx__ll__i2c_8h.html" title="Header file of I2C LL module." alt="" coords="5793,139,6069,224"/>
+<area shape="rect" id="node61" href="$stm32f4xx__ll__pwr_8h.html" title="Header file of PWR LL module." alt="" coords="6093,139,6369,224"/>
+<area shape="rect" id="node62" href="$stm32f4xx__ll__rcc_8h.html" title="Header file of RCC LL module." alt="" coords="6393,139,6669,224"/>
+<area shape="rect" id="node63" href="$stm32f4xx__ll__spi_8h.html" title="Header file of SPI LL module." alt="" coords="6693,139,6969,224"/>
+<area shape="rect" id="node64" href="$stm32f4xx__ll__system_8h.html" title="Header file of SYSTEM LL module." alt="" coords="6993,139,7274,224"/>
+<area shape="rect" id="node65" href="$stm32f4xx__ll__tim_8h.html" title="Header file of TIM LL module." alt="" coords="7298,139,7574,224"/>
+<area shape="rect" id="node66" href="$stm32f4xx__ll__usart_8h.html" title="Header file of USART LL module." alt="" coords="7598,139,7874,224"/>
+<area shape="rect" id="node67" href="$stm32f4xx__ll__utils_8h.html" title="Header file of UTILS LL module." alt="" coords="7898,139,8174,224"/>
+<area shape="rect" id="node4" href="$stm32f4xx__hal__cortex_8h.html" title="Header file of CORTEX HAL module." alt="" coords="2494,405,2781,491"/>
+<area shape="rect" id="node38" href="$stm32f4xx__hal__dma_8h.html" title="Header file of DMA HAL module." alt="" coords="2805,405,3081,491"/>
+<area shape="rect" id="node39" href="$stm32f4xx__hal__dma__ex_8h.html" title="Header file of DMA HAL extension module." alt="" coords="2975,272,3273,357"/>
+<area shape="rect" id="node40" href="$stm32f4xx__hal__exti_8h.html" title="Header file of EXTI HAL module." alt="" coords="3105,405,3381,491"/>
+<area shape="rect" id="node41" href="$stm32f4xx__hal__flash_8h.html" title="Header file of FLASH HAL module." alt="" coords="3405,405,3681,491"/>
+<area shape="rect" id="node42" href="$stm32f4xx__hal__flash__ex_8h.html" title="Header file of FLASH HAL Extension module." alt="" coords="3399,272,3697,357"/>
+<area shape="rect" id="node43" href="$stm32f4xx__hal__gpio_8h.html" title="Header file of GPIO HAL module." alt="" coords="3705,405,3981,491"/>
+<area shape="rect" id="node44" href="$stm32f4xx__hal__gpio__ex_8h.html" title="Header file of GPIO HAL Extension module." alt="" coords="3772,272,4068,357"/>
+<area shape="rect" id="node45" href="$stm32f4xx__hal__i2c_8h.html" title="Header file of I2C HAL module." alt="" coords="4005,405,4281,491"/>
+<area shape="rect" id="node46" href="$stm32f4xx__hal__pwr_8h.html" title="Header file of PWR HAL module." alt="" coords="4305,405,4581,491"/>
+<area shape="rect" id="node47" href="$stm32f4xx__hal__pwr__ex_8h.html" title="Header file of PWR HAL Extension module." alt="" coords="4194,272,4486,357"/>
+<area shape="rect" id="node48" href="$stm32f4xx__hal__rcc_8h.html" title="Header file of RCC HAL module." alt="" coords="4605,405,4881,491"/>
+<area shape="rect" id="node49" href="$stm32f4xx__hal__rcc__ex_8h.html" title="Header file of RCC HAL Extension module." alt="" coords="4562,272,4849,357"/>
+<area shape="rect" id="node50" href="$stm32f4xx__hal__spi_8h.html" title="Header file of SPI HAL module." alt="" coords="4873,272,5149,357"/>
+<area shape="rect" id="node51" href="$stm32f4xx__hal__tim_8h.html" title="Header file of TIM HAL module." alt="" coords="5049,405,5325,491"/>
+<area shape="rect" id="node52" href="$stm32f4xx__hal__tim__ex_8h.html" title="Header file of TIM HAL Extended module." alt="" coords="5224,272,5515,357"/>
+<area shape="rect" id="node53" href="$stm32f4xx__hal__uart_8h.html" title="Header file of UART HAL module." alt="" coords="5539,272,5815,357"/>
+<area shape="rect" id="node54" href="$stm32f4xx__ll__fmc_8h.html" title="Header file of FMC HAL module." alt="" coords="5839,272,6115,357"/>
+<area shape="rect" id="node5" href="$stm32f4xx__hal__conf_8h.html" title=" " alt="" coords="4005,539,4281,624"/>
+<area shape="rect" id="node6" href="$stm32f4xx__hal_8h.html" title="This file contains all the functions prototypes for the HAL module driver." alt="" coords="4005,672,4281,757"/>
+<area shape="rect" id="node7" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="760,813,1011,883"/>
+<area shape="rect" id="node17" href="$stm32f4xx__hal_8c.html" title="HAL module driver. This is the common part of the HAL initialization." alt="" coords="1035,805,1311,891"/>
+<area shape="rect" id="node18" href="$stm32f4xx__hal__cortex_8c.html" title="CORTEX HAL module driver. This file provides firmware functions to manage the following functionaliti..." alt="" coords="1335,805,1622,891"/>
+<area shape="rect" id="node19" href="$stm32f4xx__hal__dma_8c.html" title="DMA HAL module driver." alt="" coords="1646,805,1922,891"/>
+<area shape="rect" id="node20" href="$stm32f4xx__hal__dma__ex_8c.html" title="DMA Extension HAL module driver This file provides firmware functions to manage the following functio..." alt="" coords="1946,805,2243,891"/>
+<area shape="rect" id="node21" href="$stm32f4xx__hal__exti_8c.html" title="EXTI HAL module driver. This file provides firmware functions to manage the following functionalities..." alt="" coords="2267,805,2543,891"/>
+<area shape="rect" id="node22" href="$stm32f4xx__hal__flash_8c.html" title="FLASH HAL module driver. This file provides firmware functions to manage the following functionalitie..." alt="" coords="2567,805,2843,891"/>
+<area shape="rect" id="node23" href="$stm32f4xx__hal__flash__ex_8c.html" title="Extended FLASH HAL module driver. This file provides firmware functions to manage the following funct..." alt="" coords="2868,805,3167,891"/>
+<area shape="rect" id="node24" href="$stm32f4xx__hal__flash__ramfunc_8c.html" title="FLASH RAMFUNC module driver. This file provides a FLASH firmware functions which should be executed f..." alt="" coords="3191,805,3529,891"/>
+<area shape="rect" id="node25" href="$stm32f4xx__hal__gpio_8c.html" title="GPIO HAL module driver. This file provides firmware functions to manage the following functionalities..." alt="" coords="3553,805,3829,891"/>
+<area shape="rect" id="node26" href="$stm32f4xx__hal__i2c_8c.html" title="I2C HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="3853,805,4129,891"/>
+<area shape="rect" id="node27" href="$stm32f4xx__hal__i2c__ex_8c.html" title="I2C Extension HAL module driver. This file provides firmware functions to manage the following functi..." alt="" coords="4153,805,4439,891"/>
+<area shape="rect" id="node28" href="$stm32f4xx__hal__pwr_8c.html" title="PWR HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="4463,805,4739,891"/>
+<area shape="rect" id="node29" href="$stm32f4xx__hal__pwr__ex_8c.html" title="Extended PWR HAL module driver. This file provides firmware functions to manage the following functio..." alt="" coords="4763,805,5055,891"/>
+<area shape="rect" id="node30" href="$stm32f4xx__hal__rcc_8c.html" title="RCC HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="5079,805,5355,891"/>
+<area shape="rect" id="node31" href="$stm32f4xx__hal__rcc__ex_8c.html" title="Extension RCC HAL module driver. This file provides firmware functions to manage the following functi..." alt="" coords="5379,805,5666,891"/>
+<area shape="rect" id="node32" href="$stm32f4xx__hal__sdram_8c.html" title="SDRAM HAL module driver. This file provides a generic firmware to drive SDRAM memories mounted as ext..." alt="" coords="5690,805,5977,891"/>
+<area shape="rect" id="node33" href="$stm32f4xx__hal__spi_8c.html" title="SPI HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="6001,805,6277,891"/>
+<area shape="rect" id="node34" href="$stm32f4xx__hal__tim_8c.html" title="TIM HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="6301,805,6577,891"/>
+<area shape="rect" id="node35" href="$stm32f4xx__hal__tim__ex_8c.html" title="TIM HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="6601,805,6892,891"/>
+<area shape="rect" id="node36" href="$stm32f4xx__hal__uart_8c.html" title="UART HAL module driver. This file provides firmware functions to manage the following functionalities..." alt="" coords="6917,805,7193,891"/>
+<area shape="rect" id="node37" href="$stm32f4xx__ll__fmc_8c.html" title="FMC Low Layer HAL module driver." alt="" coords="7217,805,7493,891"/>
+<area shape="rect" id="node8" href="$ad405x__iio_2_s_t_m32_2_core_2_src_2main_8c.html" title=": Main program body" alt="" coords="5,946,256,1017"/>
+<area shape="rect" id="node9" href="$stm32f4xx__hal__msp_8c.html" title="This file provides code for the MSP Initialization and de&#45;Initialization codes." alt="" coords="280,939,557,1024"/>
+<area shape="rect" id="node10" href="$stm32f4xx__it_8c.html" title="Interrupt Service Routines." alt="" coords="581,946,885,1017"/>
+<area shape="rect" id="node11" href="$ad4170__iio_2app_2app__config__stm32_8h.html" title="Header file for STM32 platform configurations." alt="" coords="909,946,1168,1017"/>
+<area shape="rect" id="node13" href="$ad7124__iio_2app_2app__config__stm32_8h.html" title="Header file for STM32 platform configurations." alt="" coords="1192,946,1451,1017"/>
+<area shape="rect" id="node15" href="$ad719x__iio_2app_2app__config__stm32_8h.html" title="Header file for STM32 platform configurations." alt="" coords="1475,946,1733,1017"/>
+<area shape="rect" id="node12" href="$ad4170__iio_2app_2app__config__stm32_8c.html" title="Application configurations module for STM32 platform." alt="" coords="909,1072,1168,1143"/>
+<area shape="rect" id="node14" href="$ad7124__iio_2app_2app__config__stm32_8c.html" title="STM32 Specific configuration files for AD7124 IIO Application." alt="" coords="1192,1072,1451,1143"/>
+<area shape="rect" id="node16" href="$ad719x__iio_2app_2app__config__stm32_8c.html" title="STM32 Specific configuration files for AD719x IIO Application." alt="" coords="1475,1072,1733,1143"/>
+</map>

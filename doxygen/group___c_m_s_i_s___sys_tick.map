@@ -1,0 +1,6 @@
+<map id="System Tick Timer (SysTick)" name="System Tick Timer (SysTick)">
+<area shape="rect" id="node1" title="Type definitions for the System Timer Registers." alt="" coords="231,37,379,77"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___i_t_m.html" title="Type definitions for the Instrumentation Trace Macrocell (ITM)" alt="" coords="427,37,591,77"/>
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___i_c_b.html" title="Type definitions for the Implementation Control Block Register." alt="" coords="5,5,183,45"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___s_cn_s_c_b.html" title="Type definitions for the System Control and ID Register not in the SCB." alt="" coords="17,69,171,109"/>
+</map>

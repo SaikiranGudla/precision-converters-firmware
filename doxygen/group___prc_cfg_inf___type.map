@@ -1,0 +1,5 @@
+<map id="Processor Configuration Information Registers (IMPLEMENTATION DEFINED)" name="Processor Configuration Information Registers (IMPLEMENTATION DEFINED)">
+<area shape="rect" id="node1" title="Type definitions for the Processor Configuration Information Registerss (PRCCFGINF)" alt="" coords="268,5,483,60"/>
+<area shape="rect" id="node3" href="$group___s_t_l___type.html" title="Type definitions for the Software Test Library Observation Registerss (STL)" alt="" coords="531,13,701,53"/>
+<area shape="rect" id="node2" href="$group___err_bnk___type.html" title="Type definitions for the Error Banking Registers (ERRBNK)" alt="" coords="5,13,220,53"/>
+</map>

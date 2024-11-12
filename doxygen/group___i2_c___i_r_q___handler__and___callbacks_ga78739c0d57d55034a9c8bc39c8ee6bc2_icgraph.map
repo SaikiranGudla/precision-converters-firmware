@@ -1,0 +1,4 @@
+<map id="HAL_I2C_ER_IRQHandler" name="HAL_I2C_ER_IRQHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="209,5,391,32"/>
+<area shape="rect" id="node2" href="$stm32f4xx__it_8h.html#ad25274aece51e7f5b821f5d32b31bddf" title="This function handles I2C1 error interrupt." alt="" coords="5,5,161,32"/>
+</map>

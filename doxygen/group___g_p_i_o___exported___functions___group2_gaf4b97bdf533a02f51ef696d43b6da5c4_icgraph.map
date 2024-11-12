@@ -1,0 +1,7 @@
+<map id="HAL_GPIO_WritePin" name="HAL_GPIO_WritePin">
+<area shape="rect" id="node1" title=" " alt="" coords="577,42,727,69"/>
+<area shape="rect" id="node2" href="$ad4170__iio_2app_2app__config__stm32_8c.html#a9e1430c26bad949f82f897196d6cd694" title="Callback function to flag the capture of number of requested samples." alt="" coords="347,5,529,47"/>
+<area shape="rect" id="node3" href="$main_8h.html#ac724e431d2af879252de35615be2bdea" title="GPIO Initialization Function." alt="" coords="383,71,493,98"/>
+<area shape="rect" id="node4" href="$ad355xr__iio_2app_2app__config__stm32_8c.html#a7256d80c59f9d4eafcebc79f1b73ba72" title="Initialize the STM32 system peripherals." alt="" coords="152,71,299,98"/>
+<area shape="rect" id="node5" href="$ad355xr__iio_2app_2app__config_8c.html#aba990e48bb1b87852ff6a375f0c2f655" title="Initialize the system peripherals." alt="" coords="5,71,104,98"/>
+</map>

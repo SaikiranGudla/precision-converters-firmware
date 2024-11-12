@@ -1,0 +1,4 @@
+<map id="NVIC_EncodePriority" name="NVIC_EncodePriority">
+<area shape="rect" id="node1" title="Encode Priority." alt="" coords="220,13,375,39"/>
+<area shape="rect" id="node2" href="$ad777x__iio_2app_2app__config__stm32_8c.html#af1f14387660528349ce1709583ecc095" title="Prioritizes the LPUART1 interrupt over the other peripheral interrupts." alt="" coords="5,5,172,47"/>
+</map>

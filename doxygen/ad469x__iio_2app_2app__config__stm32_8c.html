@@ -131,7 +131,7 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa599b1bdd18c25d273dded2a87a19a2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ad469x__iio_2app_2app__config__stm32_8c.html#aa599b1bdd18c25d273dded2a87a19a2f">receivecomplete_callback</a> (DMA_HandleTypeDef *hdma)</td></tr>
+<tr class="memitem:aa599b1bdd18c25d273dded2a87a19a2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ad469x__iio_2app_2app__config__stm32_8c.html#aa599b1bdd18c25d273dded2a87a19a2f">receivecomplete_callback</a> (<a class="el" href="group___d_m_a___exported___types.html#ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</a> *hdma)</td></tr>
 <tr class="memdesc:aa599b1bdd18c25d273dded2a87a19a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function to flag the capture of number of requested samples.  <a href="ad469x__iio_2app_2app__config__stm32_8c.html#aa599b1bdd18c25d273dded2a87a19a2f">More...</a><br /></td></tr>
 <tr class="separator:aa599b1bdd18c25d273dded2a87a19a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7256d80c59f9d4eafcebc79f1b73ba72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ad469x__iio_2app_2app__config__stm32_8c.html#a7256d80c59f9d4eafcebc79f1b73ba72">stm32_system_init</a> (void)</td></tr>
@@ -253,7 +253,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void receivecomplete_callback </td>
           <td>(</td>
-          <td class="paramtype">DMA_HandleTypeDef *&#160;</td>
+          <td class="paramtype"><a class="el" href="group___d_m_a___exported___types.html#ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</a> *&#160;</td>
           <td class="paramname"><em>hdma</em></td><td>)</td>
           <td></td>
         </tr>
@@ -482,9 +482,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    .mode = GPIO_MODE_OUTPUT_PP,</div>
-<div class="line">    .speed = GPIO_SPEED_FREQ_VERY_HIGH,</div>
+<div class="line">    .mode = <a class="code" href="group___g_p_i_o__mode__define.html#ga1013838a64cec2f8c88f079c449d1982">GPIO_MODE_OUTPUT_PP</a>,</div>
+<div class="line">    .speed = <a class="code" href="group___g_p_i_o__speed__define.html#ga1944cf10e2ab172810d38b681d40b771">GPIO_SPEED_FREQ_VERY_HIGH</a>,</div>
 <div class="line">}</div>
+<div class="ttc" id="agroup___g_p_i_o__mode__define_html_ga1013838a64cec2f8c88f079c449d1982"><div class="ttname"><a href="group___g_p_i_o__mode__define.html#ga1013838a64cec2f8c88f079c449d1982">GPIO_MODE_OUTPUT_PP</a></div><div class="ttdeci">#define GPIO_MODE_OUTPUT_PP</div><div class="ttdef"><b>Definition:</b> stm32f4xx_hal_gpio.h:118</div></div>
+<div class="ttc" id="agroup___g_p_i_o__speed__define_html_ga1944cf10e2ab172810d38b681d40b771"><div class="ttname"><a href="group___g_p_i_o__speed__define.html#ga1944cf10e2ab172810d38b681d40b771">GPIO_SPEED_FREQ_VERY_HIGH</a></div><div class="ttdeci">#define GPIO_SPEED_FREQ_VERY_HIGH</div><div class="ttdef"><b>Definition:</b> stm32f4xx_hal_gpio.h:144</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -500,9 +502,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    .mode = GPIO_MODE_INPUT,</div>
-<div class="line">    .speed = GPIO_SPEED_FREQ_VERY_HIGH,</div>
+<div class="line">    .mode = <a class="code" href="group___g_p_i_o__mode__define.html#gaf40bec3146810028a84b628d37d3b391">GPIO_MODE_INPUT</a>,</div>
+<div class="line">    .speed = <a class="code" href="group___g_p_i_o__speed__define.html#ga1944cf10e2ab172810d38b681d40b771">GPIO_SPEED_FREQ_VERY_HIGH</a>,</div>
 <div class="line">}</div>
+<div class="ttc" id="agroup___g_p_i_o__mode__define_html_gaf40bec3146810028a84b628d37d3b391"><div class="ttname"><a href="group___g_p_i_o__mode__define.html#gaf40bec3146810028a84b628d37d3b391">GPIO_MODE_INPUT</a></div><div class="ttdeci">#define GPIO_MODE_INPUT</div><div class="ttdef"><b>Definition:</b> stm32f4xx_hal_gpio.h:117</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -518,8 +521,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    .mode = GPIO_MODE_INPUT,</div>
-<div class="line">    .speed = GPIO_SPEED_FREQ_VERY_HIGH,</div>
+<div class="line">    .mode = <a class="code" href="group___g_p_i_o__mode__define.html#gaf40bec3146810028a84b628d37d3b391">GPIO_MODE_INPUT</a>,</div>
+<div class="line">    .speed = <a class="code" href="group___g_p_i_o__speed__define.html#ga1944cf10e2ab172810d38b681d40b771">GPIO_SPEED_FREQ_VERY_HIGH</a>,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -554,8 +557,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    .mode = GPIO_MODE_OUTPUT_PP,</div>
-<div class="line">    .speed = GPIO_SPEED_FREQ_VERY_HIGH,</div>
+<div class="line">    .mode = <a class="code" href="group___g_p_i_o__mode__define.html#ga1013838a64cec2f8c88f079c449d1982">GPIO_MODE_OUTPUT_PP</a>,</div>
+<div class="line">    .speed = <a class="code" href="group___g_p_i_o__speed__define.html#ga1944cf10e2ab172810d38b681d40b771">GPIO_SPEED_FREQ_VERY_HIGH</a>,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -577,12 +580,13 @@ Variables</h2></td></tr>
 <div class="line">    .mode = TIM_OC_PWM2,</div>
 <div class="line">    .timer_chn = <a class="code" href="ad405x__iio_2app_2app__config__stm32_8h.html#a512547363586c59e256515b69389de1b">TIMER_CHANNEL_3</a>,</div>
 <div class="line">    .complementary_channel = <span class="keyword">true</span>,</div>
-<div class="line">    .get_timer_clock = HAL_RCC_GetPCLK2Freq,</div>
+<div class="line">    .get_timer_clock = <a class="code" href="group___r_c_c___exported___functions___group2.html#gabbd5f8933a5ee05e4b3384e33026aca1">HAL_RCC_GetPCLK2Freq</a>,</div>
 <div class="line">    .clock_divider = <a class="code" href="ad405x__iio_2app_2app__config__stm32_8h.html#ae4c0ff9fa433bcc0af620d4f55b9f2db">TIMER_1_CLK_DIVIDER</a></div>
 <div class="line">}</div>
 <div class="ttc" id="aad405x__iio_2app_2app__config__stm32_8h_html_a14a687c138f5c3f5afa9cabf917d2422"><div class="ttname"><a href="ad405x__iio_2app_2app__config__stm32_8h.html#a14a687c138f5c3f5afa9cabf917d2422">TIMER_1_PRESCALER</a></div><div class="ttdeci">#define TIMER_1_PRESCALER</div><div class="ttdef"><b>Definition:</b> app_config_stm32.h:60</div></div>
 <div class="ttc" id="aad405x__iio_2app_2app__config__stm32_8h_html_a512547363586c59e256515b69389de1b"><div class="ttname"><a href="ad405x__iio_2app_2app__config__stm32_8h.html#a512547363586c59e256515b69389de1b">TIMER_CHANNEL_3</a></div><div class="ttdeci">#define TIMER_CHANNEL_3</div><div class="ttdef"><b>Definition:</b> app_config_stm32.h:68</div></div>
 <div class="ttc" id="aad405x__iio_2app_2app__config__stm32_8h_html_ae4c0ff9fa433bcc0af620d4f55b9f2db"><div class="ttname"><a href="ad405x__iio_2app_2app__config__stm32_8h.html#ae4c0ff9fa433bcc0af620d4f55b9f2db">TIMER_1_CLK_DIVIDER</a></div><div class="ttdeci">#define TIMER_1_CLK_DIVIDER</div><div class="ttdef"><b>Definition:</b> app_config_stm32.h:62</div></div>
+<div class="ttc" id="agroup___r_c_c___exported___functions___group2_html_gabbd5f8933a5ee05e4b3384e33026aca1"><div class="ttname"><a href="group___r_c_c___exported___functions___group2.html#gabbd5f8933a5ee05e4b3384e33026aca1">HAL_RCC_GetPCLK2Freq</a></div><div class="ttdeci">uint32_t HAL_RCC_GetPCLK2Freq(void)</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -598,10 +602,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    .mode = GPIO_MODE_AF_PP,</div>
-<div class="line">    .speed = GPIO_SPEED_FREQ_VERY_HIGH,</div>
+<div class="line">    .mode = <a class="code" href="group___g_p_i_o__mode__define.html#ga526c72c5264316fc05c775b6cad4aa6a">GPIO_MODE_AF_PP</a>,</div>
+<div class="line">    .speed = <a class="code" href="group___g_p_i_o__speed__define.html#ga1944cf10e2ab172810d38b681d40b771">GPIO_SPEED_FREQ_VERY_HIGH</a>,</div>
 <div class="line">    .alternate = GPIO_AF1_TIM1</div>
 <div class="line">}</div>
+<div class="ttc" id="agroup___g_p_i_o__mode__define_html_ga526c72c5264316fc05c775b6cad4aa6a"><div class="ttname"><a href="group___g_p_i_o__mode__define.html#ga526c72c5264316fc05c775b6cad4aa6a">GPIO_MODE_AF_PP</a></div><div class="ttdeci">#define GPIO_MODE_AF_PP</div><div class="ttdef"><b>Definition:</b> stm32f4xx_hal_gpio.h:120</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -618,7 +623,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    .chip_select_port = <a class="code" href="ad469x__iio_2app_2app__config__stm32_8h.html#a35c5b09972868811ffbd7c08c530bfb5">SPI_CS_PORT_NUM</a>,</div>
-<div class="line">    .get_input_clock = HAL_RCC_GetPCLK2Freq</div>
+<div class="line">    .get_input_clock = <a class="code" href="group___r_c_c___exported___functions___group2.html#gabbd5f8933a5ee05e4b3384e33026aca1">HAL_RCC_GetPCLK2Freq</a></div>
 <div class="line">}</div>
 <div class="ttc" id="aad469x__iio_2app_2app__config__stm32_8h_html_a35c5b09972868811ffbd7c08c530bfb5"><div class="ttname"><a href="ad469x__iio_2app_2app__config__stm32_8h.html#a35c5b09972868811ffbd7c08c530bfb5">SPI_CS_PORT_NUM</a></div><div class="ttdeci">#define SPI_CS_PORT_NUM</div><div class="ttdef"><b>Definition:</b> app_config_stm32.h:46</div></div>
 </div><!-- fragment -->
@@ -638,7 +643,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    .huart = &amp;<a class="code" href="ad355xr__iio_2app_2app__config__stm32_8h.html#a25a82fcf0cd24eb6d39977cb5864cec8">huart5</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aad355xr__iio_2app_2app__config__stm32_8h_html_a25a82fcf0cd24eb6d39977cb5864cec8"><div class="ttname"><a href="ad355xr__iio_2app_2app__config__stm32_8h.html#a25a82fcf0cd24eb6d39977cb5864cec8">huart5</a></div><div class="ttdeci">UART_HandleTypeDef huart5</div></div>
+<div class="ttc" id="aad355xr__iio_2app_2app__config__stm32_8h_html_a25a82fcf0cd24eb6d39977cb5864cec8"><div class="ttname"><a href="ad355xr__iio_2app_2app__config__stm32_8h.html#a25a82fcf0cd24eb6d39977cb5864cec8">huart5</a></div><div class="ttdeci">UART_HandleTypeDef huart5</div><div class="ttdef"><b>Definition:</b> main.c:54</div></div>
 </div><!-- fragment -->
 </div>
 </div>

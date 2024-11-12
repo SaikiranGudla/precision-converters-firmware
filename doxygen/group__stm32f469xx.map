@@ -1,0 +1,11 @@
+<map id="Stm32f469xx" name="Stm32f469xx">
+<area shape="rect" id="node1" href="$group___peripheral__memory__map.html" title=" " alt="" coords="325,5,512,31"/>
+<area shape="rect" id="node2" href="$group___exported__constants.html" title=" " alt="" coords="343,55,494,80"/>
+<area shape="rect" id="node3" title=" " alt="" coords="168,161,277,187"/>
+<area shape="rect" id="node4" href="$group___exported__macros.html" title=" " alt="" coords="351,104,486,129"/>
+<area shape="rect" id="node6" href="$group___peripheral__interrupt__number__definition.html" title=" " alt="" coords="343,154,494,194"/>
+<area shape="rect" id="node7" href="$group___peripheral__registers__structures.html" title=" " alt="" coords="343,218,495,258"/>
+<area shape="rect" id="node8" href="$group___configuration__section__for___c_m_s_i_s.html" title=" " alt="" coords="337,282,500,322"/>
+<area shape="rect" id="node9" href="$group___peripheral__declaration.html" title=" " alt="" coords="335,347,503,372"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___device.html" title=" " alt="" coords="5,161,120,187"/>
+</map>

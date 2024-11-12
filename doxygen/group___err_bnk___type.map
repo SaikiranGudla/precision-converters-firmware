@@ -1,0 +1,5 @@
+<map id="Error Banking Registers (IMPLEMENTATION DEFINED)" name="Error Banking Registers (IMPLEMENTATION DEFINED)">
+<area shape="rect" id="node1" href="$group___prc_cfg_inf___type.html" title="Type definitions for the Processor Configuration Information Registerss (PRCCFGINF)" alt="" coords="507,5,721,60"/>
+<area shape="rect" id="node2" title="Type definitions for the Error Banking Registers (ERRBNK)" alt="" coords="244,13,459,53"/>
+<area shape="rect" id="node3" href="$group___e_w_i_c___type.html" title="Type definitions for the External Wakeup Interrupt Controller Registers (EWIC)" alt="" coords="5,13,196,53"/>
+</map>

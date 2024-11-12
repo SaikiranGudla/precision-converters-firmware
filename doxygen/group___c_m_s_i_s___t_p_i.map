@@ -1,0 +1,6 @@
+<map id="Trace Port Interface (TPI)" name="Trace Port Interface (TPI)">
+<area shape="rect" id="node1" title="Type definitions for the Trace Port Interface (TPI)" alt="" coords="224,37,372,77"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___f_p_u.html" title="Type definitions for the Floating Point Unit (FPU)" alt="" coords="420,37,563,77"/>
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___d_w_t.html" title="Type definitions for the Data Watchpoint and Trace (DWT)" alt="" coords="11,5,170,45"/>
+<area shape="rect" id="node3" href="$group___s_t_l___type.html" title="Type definitions for the Software Test Library Observation Registerss (STL)" alt="" coords="5,69,176,109"/>
+</map>

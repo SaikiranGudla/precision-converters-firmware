@@ -1,0 +1,5 @@
+<map id="Debug Control Functions" name="Debug Control Functions">
+<area shape="rect" id="node1" href="$group___c_m_s_i_s___core___s_a_u_functions.html" title="Functions that configure the SAU." alt="" coords="5,13,121,38"/>
+<area shape="rect" id="node2" title="Functions that access the Debug Control Block." alt="" coords="169,13,351,38"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___d_i_b_functions.html" title="Functions that access the Debug Identification Block." alt="" coords="399,5,552,45"/>
+</map>

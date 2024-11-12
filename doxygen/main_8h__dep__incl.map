@@ -1,0 +1,12 @@
+<map id="/home/runner/work/precision&#45;converters&#45;firmware/precision&#45;converters&#45;firmware/projects/ad405x_iio/STM32/Core/Inc/main.h" name="/home/runner/work/precision&#45;converters&#45;firmware/precision&#45;converters&#45;firmware/projects/ad405x_iio/STM32/Core/Inc/main.h">
+<area shape="rect" id="node1" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="760,5,1011,76"/>
+<area shape="rect" id="node2" href="$ad405x__iio_2_s_t_m32_2_core_2_src_2main_8c.html" title=": Main program body" alt="" coords="5,131,256,202"/>
+<area shape="rect" id="node3" href="$stm32f4xx__hal__msp_8c.html" title="This file provides code for the MSP Initialization and de&#45;Initialization codes." alt="" coords="280,124,557,209"/>
+<area shape="rect" id="node4" href="$stm32f4xx__it_8c.html" title="Interrupt Service Routines." alt="" coords="581,131,885,202"/>
+<area shape="rect" id="node5" href="$ad4170__iio_2app_2app__config__stm32_8h.html" title="Header file for STM32 platform configurations." alt="" coords="909,131,1168,202"/>
+<area shape="rect" id="node7" href="$ad7124__iio_2app_2app__config__stm32_8h.html" title="Header file for STM32 platform configurations." alt="" coords="1192,131,1451,202"/>
+<area shape="rect" id="node9" href="$ad719x__iio_2app_2app__config__stm32_8h.html" title="Header file for STM32 platform configurations." alt="" coords="1475,131,1733,202"/>
+<area shape="rect" id="node6" href="$ad4170__iio_2app_2app__config__stm32_8c.html" title="Application configurations module for STM32 platform." alt="" coords="909,257,1168,328"/>
+<area shape="rect" id="node8" href="$ad7124__iio_2app_2app__config__stm32_8c.html" title="STM32 Specific configuration files for AD7124 IIO Application." alt="" coords="1192,257,1451,328"/>
+<area shape="rect" id="node10" href="$ad719x__iio_2app_2app__config__stm32_8c.html" title="STM32 Specific configuration files for AD719x IIO Application." alt="" coords="1475,257,1733,328"/>
+</map>

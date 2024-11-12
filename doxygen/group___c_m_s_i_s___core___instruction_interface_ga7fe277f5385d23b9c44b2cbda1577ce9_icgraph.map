@@ -1,0 +1,22 @@
+<map id="__DSB" name="__DSB">
+<area shape="rect" id="node1" title="Data Synchronization Barrier." alt="" coords="260,461,323,488"/>
+<area shape="rect" id="node2" href="$group___c_m_s_i_s___core___n_v_i_c_functions.html#gae016e4c1986312044ee768806537d52f" title="Disable Interrupt." alt="" coords="35,5,182,32"/>
+<area shape="rect" id="node3" href="$group___c_m_s_i_s___core___n_v_i_c_functions.html#ga0df355460bc1783d58f9d72ee4884208" title="Set Interrupt Vector." alt="" coords="40,56,177,83"/>
+<area shape="rect" id="node4" href="$group___c_m_s_i_s___core___n_v_i_c_functions.html#ga0d9aa2d30fa54b41eb780c16e35b676c" title="System Reset." alt="" coords="28,107,189,133"/>
+<area shape="rect" id="node5" href="$group___c_m_s_i_s___core___n_v_i_c_functions.html#ga030222ef0862a4eec8026e3845b8ee64" title="Software Reset." alt="" coords="33,157,184,184"/>
+<area shape="rect" id="node6" href="$mpu__armv7_8h.html#a61814eba4652a0fdfb76bbe222086327" title=" " alt="" coords="36,208,181,235"/>
+<area shape="rect" id="node7" href="$mpu__armv7_8h.html#a5a3f40314553baccdeea551f86d9a997" title=" " alt="" coords="39,259,179,285"/>
+<area shape="rect" id="node8" href="$group___c_m_s_i_s___core___n_v_i_c_functions.html#ga8684eef21a32a624112814027635796b" title="Set Debug Authentication Control Register." alt="" coords="43,309,174,336"/>
+<area shape="rect" id="node9" href="$group___c_m_s_i_s___core___cache_functions.html#gaf5585be5547cc60585d702a6129f4c17" title="Clean D&#45;Cache." alt="" coords="37,360,180,387"/>
+<area shape="rect" id="node10" href="$group___c_m_s_i_s___core___cache_functions.html#gabc9e51347dca344c72948c3dba0364fd" title="D&#45;Cache Clean by address." alt="" coords="7,411,210,437"/>
+<area shape="rect" id="node11" href="$group___c_m_s_i_s___core___cache_functions.html#ga5b22ca58709fadc326da83197a2f28bb" title="Clean &amp; Invalidate D&#45;Cache." alt="" coords="5,461,212,488"/>
+<area shape="rect" id="node12" href="$group___c_m_s_i_s___core___cache_functions.html#ga83fe294bcc60d3c4f1c279f13477dda7" title="D&#45;Cache Clean and Invalidate by address." alt="" coords="5,513,212,554"/>
+<area shape="rect" id="node13" href="$group___c_m_s_i_s___core___cache_functions.html#gafe64b44d1a61483a947e44a77a9d3287" title="Disable D&#45;Cache." alt="" coords="31,579,186,605"/>
+<area shape="rect" id="node14" href="$group___c_m_s_i_s___core___cache_functions.html#ga56baa06298799dea5f207d4c12d9d4a6" title="Disable I&#45;Cache." alt="" coords="35,629,183,656"/>
+<area shape="rect" id="node15" href="$group___c_m_s_i_s___core___cache_functions.html#ga3861db932100ccb53f994e2cc68ed79c" title="Enable D&#45;Cache." alt="" coords="34,680,183,707"/>
+<area shape="rect" id="node16" href="$group___c_m_s_i_s___core___cache_functions.html#ga980ffe52af778f2535ccc52f25f9a7de" title="Enable I&#45;Cache." alt="" coords="37,731,180,757"/>
+<area shape="rect" id="node17" href="$group___c_m_s_i_s___core___cache_functions.html#ga99fe43c224644881935de135ceaa2dd9" title="Invalidate D&#45;Cache." alt="" coords="23,781,194,808"/>
+<area shape="rect" id="node18" href="$group___c_m_s_i_s___core___cache_functions.html#ga31c2439722ab4dbd0c67b196e3377ca7" title="D&#45;Cache Invalidate by address." alt="" coords="23,833,194,874"/>
+<area shape="rect" id="node19" href="$group___c_m_s_i_s___core___cache_functions.html#ga62419cb7e6773e3d9236f14e458c1b05" title="Invalidate I&#45;Cache." alt="" coords="27,899,191,925"/>
+<area shape="rect" id="node20" href="$group___c_m_s_i_s___core___cache_functions.html#gaeb1a2bf181afcfb837ce0502e6bfa4fb" title="I&#45;Cache Invalidate by address." alt="" coords="27,950,191,991"/>
+</map>
