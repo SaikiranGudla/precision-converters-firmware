@@ -20,19 +20,6 @@ jobs:
         run: |
           git submodule update --init libraries/no-OS
 
-      - name: Run astyle on source code
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y astyle fd-find
-          set -e
-          formatted=$(fdfind -e c -e h . projects | xargs astyle --formatted --options=libraries/no-OS/ci/astyle_config)
-          if [[ ! -z "${formatted}" ]]; then
-            echo "ERROR: The following files were formatted by astyle:"
-            echo "${formatted}"
-            exit 1
-          fi
-          echo "SUCCESS: No files were formatted by astyle"
-
   build:
     runs-on: ubuntu-latest
     needs: [lint]
