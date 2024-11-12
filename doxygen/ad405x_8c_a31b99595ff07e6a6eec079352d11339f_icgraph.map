@@ -1,0 +1,17 @@
+<map id="ad405x_read" name="ad405x_read">
+<area shape="rect" id="node1" title="Read device register." alt="" coords="767,278,873,305"/>
+<area shape="rect" id="node2" href="$ad405x_8c.html#a0b7dbc056b13300fbf25ddd0e10a7cfb" title="Initialize the device." alt="" coords="593,253,691,279"/>
+<area shape="rect" id="node3" href="$ad405x_8c.html#a683206b2c6482e8181918922eb34a7f4" title="Update specific register bits." alt="" coords="565,303,719,330"/>
+<area shape="rect" id="node4" href="$ad405x_8c.html#a112d94464fc72ac320766fa1b27e9141" title="Disable INVERT_ON_CHOP." alt="" coords="306,5,475,47"/>
+<area shape="rect" id="node5" href="$ad405x_8c.html#a91647373d66a6f0e1425951e81084a1e" title="Enable INVERT_ON_CHOP." alt="" coords="307,71,474,112"/>
+<area shape="rect" id="node6" href="$ad405x_8c.html#a5d7fbebcb3742d9588419ebe43f9cf26" title="Get averaging filter window length." alt="" coords="305,136,476,177"/>
+<area shape="rect" id="node7" href="$ad405x_8c.html#a06a9b6d921f2111846cc1953719db4ad" title="Get output data format setting." alt="" coords="298,202,483,229"/>
+<area shape="rect" id="node8" href="$ad405x_8c.html#aa6ff0ca79f426e2a388eb9d8cacffdb0" title="Get DEV_EN signal polarity." alt="" coords="286,253,495,279"/>
+<area shape="rect" id="node9" href="$ad405x_8c.html#a5bb4a8fd6e853b84f0e18671b7f56249" title="Get GP mode setting." alt="" coords="308,303,473,330"/>
+<area shape="rect" id="node10" href="$ad405x_8c.html#a330e918c4721b7af3e7ade7f3a0b4aaf" title="Get sample rate for Burst and Autonomous Modes." alt="" coords="297,354,484,381"/>
+<area shape="rect" id="node11" href="$ad405x_8c.html#af7b58be286e4da075eccbdf214589655" title="Enter ADC Mode." alt="" coords="305,405,476,431"/>
+<area shape="rect" id="node13" href="$ad405x_8c.html#aa76d3887d52b3b1ff3b2034f404e9564" title="Enter Averaging Mode." alt="" coords="284,455,497,482"/>
+<area shape="rect" id="node14" href="$ad405x_8c.html#a2e2ca9b7ad51006af1b2b3fd0951b6b8" title="Enter Burst Averaging Mode." alt="" coords="264,506,517,533"/>
+<area shape="rect" id="node15" href="$ad405x_8c.html#a2ad41fe31ec82635d42c6f83c782a79a" title="Software reset the device." alt="" coords="320,557,461,583"/>
+<area shape="rect" id="node12" href="$ad405x_8c.html#a09c204a1bf949ac99e72ab02b3571613" title="Set operation mode." alt="" coords="5,455,216,482"/>
+</map>
