@@ -51,17 +51,19 @@ jobs:
 
       - name: Build project
         run: |
-          # Check contents of the root directory
-          echo "Listing root directory:"
-          ls -la /
           
           echo "Check pwd"
           pwd
           
-          # Configure Git to mark the directory as safe
-          git config --global --add safe.directory /${PWD}
-
+          echo "Again pwd: ${PWD}"
           
+          # Configure Git to mark the directory as safe
+          git config --global --add safe.directory "${PWD}"
+          
+          # Check contents of the root directory
+          echo "Listing root directory:"
+          ls -la /
+
           # Check contents of /opt directory
           echo "Listing /opt directory:"
           ls -la /opt
