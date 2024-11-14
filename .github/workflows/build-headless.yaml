@@ -25,6 +25,20 @@ jobs:
           commit_id=$(git rev-parse --short HEAD)
           echo "Commit ID: $commit_id"    
           echo "COMMIT=$commit_id" >> $GITHUB_ENV  # Store commit_id
+          
+      - name: Run astyle on source code
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y astyle fd-find
+          set -e
+          # Exclude all `STM32` directories within any project
+          formatted=$(fdfind -e c -e h . projects --exclude 'projects/*/STM32' | xargs astyle --formatted --options=libraries/no-OS/ci/astyle_config)
+          if [[ ! -z "${formatted}" ]]; then
+            echo "ERROR: The following files were formatted by astyle:"
+            echo "${formatted}"
+            exit 1
+          fi
+          echo "SUCCESS: No files were formatted by astyle"
 
   build:
     runs-on: ubuntu-latest
