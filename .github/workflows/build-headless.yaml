@@ -32,7 +32,7 @@ jobs:
       matrix:
         project:
           - ad405x_iio
-          - ad469x_iio  
+         # - ad469x_iio  
           
     # Pull the container from the private repository
     container:
