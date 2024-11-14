@@ -22,7 +22,7 @@ jobs:
           
       - name: Get Commit ID
         run: |
-          commit_id=$(git rev-parse HEAD)
+          commit_id=$(git rev-parse --short HEAD)
           echo "Commit ID: $commit_id"        
 
   build:
@@ -60,6 +60,8 @@ jobs:
           # Check contents of /opt directory
           echo "Listing /opt directory:"
           ls -la /opt
+          
+          echo "Commit ID: $commit_id"
           
           /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
             -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
