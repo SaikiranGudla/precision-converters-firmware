@@ -23,7 +23,8 @@ jobs:
       - name: Get Commit ID
         run: |
           commit_id=$(git rev-parse --short HEAD)
-          echo "Commit ID: $commit_id"        
+          echo "Commit ID: $commit_id"    
+          echo "COMMIT_ID=$commit_id" >> $GITHUB_ENV  # Store commit_id
 
   build:
     runs-on: ubuntu-latest
@@ -61,7 +62,7 @@ jobs:
           echo "Listing /opt directory:"
           ls -la /opt
           
-          echo "Commit ID: $commit_id"
+          echo "Commit ID: $COMMIT_ID"
           
           /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
             -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
@@ -72,12 +73,12 @@ jobs:
             -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
             -data /tmp/stm-workspace \
             -build ${{ matrix.project }}/Debug  \
-            -D FIRMWARE_VERSION=$commit_id
+            -D FIRMWARE_VERSION=$COMMIT_ID
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ad405x
+          name: ${{ matrix.project }}
           # The output artifacts are BLE_p2pServer.elf, BLE_p2pServer.map, etc.
           # Use a wildcard pattern to get them all
           path: projects/${{ matrix.project }}/STM32/Debug/${{ matrix.project }}.bin
