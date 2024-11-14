@@ -24,7 +24,7 @@ jobs:
         run: |
           commit_id=$(git rev-parse --short HEAD)
           echo "Commit ID: $commit_id"    
-          echo "COMMITS_ID=$commit_id" >> $GITHUB_ENV  # Store commit_id
+          echo "COMMIT=$commit_id" >> $GITHUB_ENV  # Store commit_id
 
   build:
     runs-on: ubuntu-latest
@@ -58,11 +58,19 @@ jobs:
           echo "Check pwd"
           pwd
           
+          # Configure Git to mark the directory as safe
+          git config --global --add safe.directory /${PWD}
+
+          
           # Check contents of /opt directory
           echo "Listing /opt directory:"
           ls -la /opt
           
-          echo "Step commit id: ${{ env.COMMITS_ID }}"
+          echo "Step commit id: ${{ env.COMMIT }}"
+          
+          # Retrieve commit ID directly in this step
+          sh_id=$(git rev-parse --short HEAD)
+          echo "Commit ID: $sh_id"
          
           /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
             -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
@@ -73,7 +81,7 @@ jobs:
             -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
             -data /tmp/stm-workspace \
             -build ${{ matrix.project }}/Debug  \
-            -D FIRMWARE_VERSION=${{ env.COMMITS_ID }}
+            -D FIRMWARE_VERSION=$sh_id
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
