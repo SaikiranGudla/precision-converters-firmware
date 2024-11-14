@@ -31,13 +31,16 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y astyle fd-find
           set -e
-          # Exclude all `STM32` directories within any project
-          formatted=$(fdfind -e c -e h . projects --exclude 'projects/*/STM32' | xargs astyle --formatted --options=libraries/no-OS/ci/astyle_config)
+          
+          # Find all `.c` and `.h` files excluding those in any `STM32` directory within `projects`
+          formatted=$(find projects -type f \( -name '*.c' -o -name '*.h' \) | grep -v '/STM32/' | xargs astyle --formatted --options=libraries/no-OS/ci/astyle_config)
+          
           if [[ ! -z "${formatted}" ]]; then
             echo "ERROR: The following files were formatted by astyle:"
             echo "${formatted}"
             exit 1
           fi
+          
           echo "SUCCESS: No files were formatted by astyle"
 
   build:
