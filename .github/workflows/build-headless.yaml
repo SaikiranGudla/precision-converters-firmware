@@ -62,7 +62,10 @@ jobs:
           echo "Listing /opt directory:"
           ls -la /opt
           
-          echo "Commit ID: $COMMIT_ID"
+           # Retrieve commit ID directly in this step
+          commits_id=$(git rev-parse --short HEAD)
+          echo "Commit ID: $commits_id"
+         
           
           /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
             -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
@@ -73,7 +76,7 @@ jobs:
             -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
             -data /tmp/stm-workspace \
             -build ${{ matrix.project }}/Debug  \
-            -D FIRMWARE_VERSION=$COMMIT_ID
+            -D FIRMWARE_VERSION=$commits_id
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
