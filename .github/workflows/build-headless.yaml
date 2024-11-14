@@ -19,6 +19,11 @@ jobs:
       - name: Update no-OS submodule
         run: |
           git submodule update --init libraries/no-OS
+          
+      - name: Get Commit ID
+        run: |
+          commit_id=$(git rev-parse HEAD)
+          echo "Commit ID: $commit_id"        
 
   build:
     runs-on: ubuntu-latest
@@ -27,6 +32,7 @@ jobs:
       matrix:
         project:
           - ad405x_iio
+          - ad469x_iio  
           
     # Pull the container from the private repository
     container:
@@ -58,12 +64,13 @@ jobs:
           /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
             -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
             -data /tmp/stm-workspace \
-            -import "projects/ad405x_iio/STM32"
+            -import "projects/${{ matrix.project }}/STM32"
 
           /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
             -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
             -data /tmp/stm-workspace \
-            -build ad405x_iio/Debug
+            -build ${{ matrix.project }}/Debug  \
+            -D FIRMWARE_VERSION=$commit_id
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -71,6 +78,6 @@ jobs:
           name: ad405x
           # The output artifacts are BLE_p2pServer.elf, BLE_p2pServer.map, etc.
           # Use a wildcard pattern to get them all
-          path: projects/ad405x_iio/STM32/Debug/ad405x_iio.bin
+          path: projects/${{ matrix.project }}/STM32/Debug/${{ matrix.project }}.bin
           
 
