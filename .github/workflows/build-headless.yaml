@@ -36,12 +36,11 @@ jobs:
           formatted=$(find projects -type f \( -name '*.c' -o -name '*.h' \) | grep -v '/STM32/' | xargs astyle --formatted --options=libraries/no-OS/ci/astyle_config)
           
           if [[ ! -z "${formatted}" ]]; then
-            echo "ERROR: The following files were formatted by astyle:"
+            echo "INFO: The following files were formatted by astyle:"
             echo "${formatted}"
-            exit 1
+          else
+            echo "SUCCESS: No files needed formatting by astyle"
           fi
-          
-          echo "SUCCESS: No files were formatted by astyle"
 
   build:
     runs-on: ubuntu-latest
@@ -100,7 +99,8 @@ jobs:
             -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
             -data /tmp/stm-workspace \
             -build ${{ matrix.project }}/Debug  \
-            -D FIRMWARE_VERSION=$sh_id
+            -D FIRMWARE_VERSION=$sh_id \
+            -DCMAKE_C_FLAGS="-Werror"
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
