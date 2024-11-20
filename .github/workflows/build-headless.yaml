@@ -111,6 +111,7 @@ jobs:
           name: ${{ matrix.project }}
           # The output artifacts are BLE_p2pServer.elf, BLE_p2pServer.map, etc.
           # Use a wildcard pattern to get them all
-          path: projects/${{ matrix.project }}/STM32/Debug/${{ matrix.project }}.bin
+        path: |
+          projects/${{ matrix.project }}/STM32/Debug/${{ matrix.project }}.bin
           warnings.log
 
