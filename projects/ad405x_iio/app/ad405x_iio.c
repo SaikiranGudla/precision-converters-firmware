@@ -1495,7 +1495,8 @@ int32_t iio_ad405x_initialize(void)
 
 		/* Initialize AD405X device and peripheral interface */
 		init_status = ad405x_init(&p_ad405x_dev, ad405x_init_params);
-		if (init_status) {
+		if (init_status) 
+		{
 			return init_status;
 		}
 

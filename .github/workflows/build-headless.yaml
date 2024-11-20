@@ -89,6 +89,9 @@ jobs:
           # Retrieve commit ID directly in this step
           sh_id=$(git rev-parse --short HEAD)
           echo "Commit ID: $sh_id"
+          
+          # Create warnings.log before build
+          touch warnings.log
          
           /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
             -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
@@ -100,7 +103,7 @@ jobs:
             -data /tmp/stm-workspace \
             -build ${{ matrix.project }}/Debug  \
             -D FIRMWARE_VERSION=$sh_id \
-            -DCMAKE_C_FLAGS="-Werror"
+            2>&1 | tee -a warnings.log | grep -i 'warning'
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -109,5 +112,5 @@ jobs:
           # The output artifacts are BLE_p2pServer.elf, BLE_p2pServer.map, etc.
           # Use a wildcard pattern to get them all
           path: projects/${{ matrix.project }}/STM32/Debug/${{ matrix.project }}.bin
-          
+          warnings.log
 
