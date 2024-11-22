@@ -104,7 +104,7 @@ jobs:
             -data /tmp/stm-workspace \
             -build ${{ matrix.project }}/Debug  \
             -D FIRMWARE_VERSION=$sh_id \
-            2>&1 | tee -a warnings.log | grep -i 'warning'
+            2>&1 | grep -i 'warning' | tee -a warnings.log
 
       - name: Upload warnings log
         uses: actions/upload-artifact@v4
