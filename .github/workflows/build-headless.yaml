@@ -93,6 +93,7 @@ jobs:
           
           # Create warnings.log before build
           touch warnings.log
+          touch specific_warnings.log
          
           /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
             -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
@@ -105,6 +106,16 @@ jobs:
             -build ${{ matrix.project }}/Debug  \
             -D FIRMWARE_VERSION=$sh_id \
             2>&1 | grep -i 'warning' | tee -a warnings.log
+
+      - name: Filter specific warnings
+        run: |
+          grep "projects/${{ matrix.project }}/app" warnings.log > specific_warnings.log
+
+      - name: Upload specific warnings log
+        uses: actions/upload-artifact@v4
+        with:
+          name: specific-warnings-log
+          path: specific_warnings.log
 
       - name: Upload warnings log
         uses: actions/upload-artifact@v4
