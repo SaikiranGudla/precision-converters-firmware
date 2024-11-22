@@ -92,8 +92,8 @@ jobs:
           echo "Commit ID: $sh_id"
           
           # Create warnings.log before build
-          touch warnings.log
-          touch specific_warnings.log
+          touch ${{ matrix.project }}_warnings.log
+          touch ${{ matrix.project }}_specific_warnings.log
          
           /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
             -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
@@ -114,14 +114,14 @@ jobs:
       - name: Upload specific warnings log
         uses: actions/upload-artifact@v4
         with:
-          name: specific-warnings-log
-          path: specific_warnings.log
+          name: ${{ matrix.project }}-specific-warnings-log
+          path: ${{ matrix.project }}_specific_warnings.log
 
       - name: Upload warnings log
         uses: actions/upload-artifact@v4
         with:
-          name: warnings-log
-          path: warnings.log
+          name: ${{ matrix.project }}-warnings-log
+          path: ${{ matrix.project }}_warnings.log
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
