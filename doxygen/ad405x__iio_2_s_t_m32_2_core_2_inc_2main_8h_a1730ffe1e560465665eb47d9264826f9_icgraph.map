@@ -1,0 +1,5 @@
+<map id="Error_Handler" name="Error_Handler">
+<area shape="rect" id="node1" title="This function is executed in case of error occurrence." alt="" coords="227,31,337,57"/>
+<area shape="rect" id="node2" href="$group___s_p_i___exported___functions___group1.html#ga17f583be14b22caffa6c4e56dcd035ef" title="SPI MSP Initialization This function configures the hardware resources used in this example." alt="" coords="27,5,157,32"/>
+<area shape="rect" id="node3" href="$group___t_i_m___exported___functions___group1.html#ga818f4d5d1e2f417438d281b4ac9efb9c" title="TIM_Base MSP Initialization This function configures the hardware resources used in this example." alt="" coords="5,56,179,83"/>
+</map>

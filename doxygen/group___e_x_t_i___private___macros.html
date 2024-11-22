@@ -93,11 +93,43 @@ Macros</h2></td></tr>
 <tr class="separator:ga839c895e37f0e74052194d91ad68a3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga82f191b2ea96948f302dc6c2108ea534"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___e_x_t_i___private___macros.html#ga82f191b2ea96948f302dc6c2108ea534">IS_EXTI_GPIO_PIN</a>(__PIN__)&#160;&#160;&#160;((__PIN__) &lt; 16U)</td></tr>
 <tr class="separator:ga82f191b2ea96948f302dc6c2108ea534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1612a68c70ca4cdd0cbd3554e359af5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___e_x_t_i___private___macros.html#gad1612a68c70ca4cdd0cbd3554e359af5">IS_EXTI_LINE</a>(__EXTI_LINE__)</td></tr>
+<tr class="separator:gad1612a68c70ca4cdd0cbd3554e359af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa19d2fffcd305b75bf037aaf8f071ba7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___e_x_t_i___private___macros.html#gaa19d2fffcd305b75bf037aaf8f071ba7">IS_EXTI_MODE</a>(__EXTI_LINE__)</td></tr>
+<tr class="separator:gaa19d2fffcd305b75bf037aaf8f071ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba684e88699639398fb59c361c13c113"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___e_x_t_i___private___macros.html#gaba684e88699639398fb59c361c13c113">IS_EXTI_TRIGGER</a>(__EXTI_LINE__)&#160;&#160;&#160;(((__EXTI_LINE__)  &amp; ~<a class="el" href="group___e_x_t_i___private___constants.html#ga3e14df666414849fd5a3907a96a2a892">EXTI_TRIGGER_MASK</a>) == 0x00u)</td></tr>
+<tr class="separator:gaba684e88699639398fb59c361c13c113"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8fc9a0110e16df06c61b51d46e50eb3f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___e_x_t_i___private___macros.html#ga8fc9a0110e16df06c61b51d46e50eb3f">IS_EXTI_PENDING_EDGE</a>(__EXTI_LINE__)&#160;&#160;&#160;((__EXTI_LINE__) == <a class="el" href="group___e_x_t_i___trigger.html#ga481cea6a2aafe107e5657b65887c81d5">EXTI_TRIGGER_RISING_FALLING</a>)</td></tr>
+<tr class="separator:ga8fc9a0110e16df06c61b51d46e50eb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ec20cce9b1da8e1bd3de992511ccc1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___e_x_t_i___private___macros.html#ga1ec20cce9b1da8e1bd3de992511ccc1e">IS_EXTI_CONFIG_LINE</a>(__EXTI_LINE__)&#160;&#160;&#160;(((__EXTI_LINE__) &amp; <a class="el" href="group___e_x_t_i___private___constants.html#ga6f245ca02e17c1798fe43a66ea5b7fa4">EXTI_CONFIG</a>) != 0x00u)</td></tr>
+<tr class="separator:ga1ec20cce9b1da8e1bd3de992511ccc1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga839c895e37f0e74052194d91ad68a3ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___e_x_t_i___private___macros.html#ga839c895e37f0e74052194d91ad68a3ae">IS_EXTI_GPIO_PORT</a>(__PORT__)</td></tr>
+<tr class="separator:ga839c895e37f0e74052194d91ad68a3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82f191b2ea96948f302dc6c2108ea534"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___e_x_t_i___private___macros.html#ga82f191b2ea96948f302dc6c2108ea534">IS_EXTI_GPIO_PIN</a>(__PIN__)&#160;&#160;&#160;((__PIN__) &lt; 16U)</td></tr>
+<tr class="separator:ga82f191b2ea96948f302dc6c2108ea534"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga1ec20cce9b1da8e1bd3de992511ccc1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1ec20cce9b1da8e1bd3de992511ccc1e">&#9670;&nbsp;</a></span>IS_EXTI_CONFIG_LINE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ec20cce9b1da8e1bd3de992511ccc1e">&#9670;&nbsp;</a></span>IS_EXTI_CONFIG_LINE <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_EXTI_CONFIG_LINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__EXTI_LINE__</td><td>)</td>
+          <td>&#160;&#160;&#160;(((__EXTI_LINE__) &amp; <a class="el" href="group___e_x_t_i___private___constants.html#ga6f245ca02e17c1798fe43a66ea5b7fa4">EXTI_CONFIG</a>) != 0x00u)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1ec20cce9b1da8e1bd3de992511ccc1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ec20cce9b1da8e1bd3de992511ccc1e">&#9670;&nbsp;</a></span>IS_EXTI_CONFIG_LINE <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -115,7 +147,25 @@ Macros</h2></td></tr>
 </div>
 </div>
 <a id="ga82f191b2ea96948f302dc6c2108ea534"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga82f191b2ea96948f302dc6c2108ea534">&#9670;&nbsp;</a></span>IS_EXTI_GPIO_PIN</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga82f191b2ea96948f302dc6c2108ea534">&#9670;&nbsp;</a></span>IS_EXTI_GPIO_PIN <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_EXTI_GPIO_PIN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__PIN__</td><td>)</td>
+          <td>&#160;&#160;&#160;((__PIN__) &lt; 16U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga82f191b2ea96948f302dc6c2108ea534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga82f191b2ea96948f302dc6c2108ea534">&#9670;&nbsp;</a></span>IS_EXTI_GPIO_PIN <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,7 +183,7 @@ Macros</h2></td></tr>
 </div>
 </div>
 <a id="ga839c895e37f0e74052194d91ad68a3ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga839c895e37f0e74052194d91ad68a3ae">&#9670;&nbsp;</a></span>IS_EXTI_GPIO_PORT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga839c895e37f0e74052194d91ad68a3ae">&#9670;&nbsp;</a></span>IS_EXTI_GPIO_PORT <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,8 +207,30 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="ga839c895e37f0e74052194d91ad68a3ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga839c895e37f0e74052194d91ad68a3ae">&#9670;&nbsp;</a></span>IS_EXTI_GPIO_PORT <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_EXTI_GPIO_PORT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__PORT__</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                         (((__PORT__) == <a class="code" href="group___e_x_t_i___g_p_i_o_sel.html#ga562f178c10011ea8de3721d400176558">EXTI_GPIOA</a>) || \</div>
+<div class="line">                                         ((__PORT__) == <a class="code" href="group___e_x_t_i___g_p_i_o_sel.html#ga226a2e7987e1e808eff168985d378641">EXTI_GPIOB</a>) || \</div>
+<div class="line">                                         ((__PORT__) == <a class="code" href="group___e_x_t_i___g_p_i_o_sel.html#gaa74b8f490a793f237c6a55f56ba6e644">EXTI_GPIOC</a>) || \</div>
+<div class="line">                                         ((__PORT__) == EXTI_GPIOH))</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="gad1612a68c70ca4cdd0cbd3554e359af5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad1612a68c70ca4cdd0cbd3554e359af5">&#9670;&nbsp;</a></span>IS_EXTI_LINE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad1612a68c70ca4cdd0cbd3554e359af5">&#9670;&nbsp;</a></span>IS_EXTI_LINE <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,8 +256,30 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="gad1612a68c70ca4cdd0cbd3554e359af5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad1612a68c70ca4cdd0cbd3554e359af5">&#9670;&nbsp;</a></span>IS_EXTI_LINE <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_EXTI_LINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__EXTI_LINE__</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                             ((((__EXTI_LINE__) &amp; ~(<a class="code" href="group___e_x_t_i___private___constants.html#ga6aa8e044ea8987b6839f419123734e4b">EXTI_PROPERTY_MASK</a> | <a class="code" href="group___e_x_t_i___private___constants.html#ga755405defae45017e19a17fd0279869c">EXTI_PIN_MASK</a>)) == 0x00u) &amp;&amp; \</div>
+<div class="line">                                             ((((__EXTI_LINE__) &amp; <a class="code" href="group___e_x_t_i___private___constants.html#ga6aa8e044ea8987b6839f419123734e4b">EXTI_PROPERTY_MASK</a>) == <a class="code" href="group___e_x_t_i___private___constants.html#ga6f245ca02e17c1798fe43a66ea5b7fa4">EXTI_CONFIG</a>)              || \</div>
+<div class="line">                                              (((__EXTI_LINE__) &amp; <a class="code" href="group___e_x_t_i___private___constants.html#ga6aa8e044ea8987b6839f419123734e4b">EXTI_PROPERTY_MASK</a>) == <a class="code" href="group___e_x_t_i___private___constants.html#gacfa322960fc87db022536119cabb4d2a">EXTI_GPIO</a>))               &amp;&amp; \</div>
+<div class="line">                                              (((__EXTI_LINE__) &amp; <a class="code" href="group___e_x_t_i___private___constants.html#ga755405defae45017e19a17fd0279869c">EXTI_PIN_MASK</a>) &lt; <a class="code" href="group___e_x_t_i___private___constants.html#ga577c4d3186ba6dd303761b23510595ef">EXTI_LINE_NB</a>))</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="gaa19d2fffcd305b75bf037aaf8f071ba7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa19d2fffcd305b75bf037aaf8f071ba7">&#9670;&nbsp;</a></span>IS_EXTI_MODE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa19d2fffcd305b75bf037aaf8f071ba7">&#9670;&nbsp;</a></span>IS_EXTI_MODE <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,8 +299,46 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="gaa19d2fffcd305b75bf037aaf8f071ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa19d2fffcd305b75bf037aaf8f071ba7">&#9670;&nbsp;</a></span>IS_EXTI_MODE <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_EXTI_MODE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__EXTI_LINE__</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                              ((((__EXTI_LINE__) &amp; <a class="code" href="group___e_x_t_i___private___constants.html#ga657f081646b552ee10bdfc7af94b5cdf">EXTI_MODE_MASK</a>) != 0x00u) &amp;&amp; \</div>
+<div class="line">                                              (((__EXTI_LINE__) &amp; ~<a class="code" href="group___e_x_t_i___private___constants.html#ga657f081646b552ee10bdfc7af94b5cdf">EXTI_MODE_MASK</a>) == 0x00u))</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ga8fc9a0110e16df06c61b51d46e50eb3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8fc9a0110e16df06c61b51d46e50eb3f">&#9670;&nbsp;</a></span>IS_EXTI_PENDING_EDGE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8fc9a0110e16df06c61b51d46e50eb3f">&#9670;&nbsp;</a></span>IS_EXTI_PENDING_EDGE <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_EXTI_PENDING_EDGE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__EXTI_LINE__</td><td>)</td>
+          <td>&#160;&#160;&#160;((__EXTI_LINE__) == <a class="el" href="group___e_x_t_i___trigger.html#ga481cea6a2aafe107e5657b65887c81d5">EXTI_TRIGGER_RISING_FALLING</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8fc9a0110e16df06c61b51d46e50eb3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8fc9a0110e16df06c61b51d46e50eb3f">&#9670;&nbsp;</a></span>IS_EXTI_PENDING_EDGE <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,7 +356,25 @@ Macros</h2></td></tr>
 </div>
 </div>
 <a id="gaba684e88699639398fb59c361c13c113"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaba684e88699639398fb59c361c13c113">&#9670;&nbsp;</a></span>IS_EXTI_TRIGGER</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaba684e88699639398fb59c361c13c113">&#9670;&nbsp;</a></span>IS_EXTI_TRIGGER <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_EXTI_TRIGGER</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__EXTI_LINE__</td><td>)</td>
+          <td>&#160;&#160;&#160;(((__EXTI_LINE__)  &amp; ~<a class="el" href="group___e_x_t_i___private___constants.html#ga3e14df666414849fd5a3907a96a2a892">EXTI_TRIGGER_MASK</a>) == 0x00u)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaba684e88699639398fb59c361c13c113"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaba684e88699639398fb59c361c13c113">&#9670;&nbsp;</a></span>IS_EXTI_TRIGGER <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

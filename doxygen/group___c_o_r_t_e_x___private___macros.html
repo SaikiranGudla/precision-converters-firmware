@@ -89,11 +89,39 @@ Macros</h2></td></tr>
 <tr class="separator:ga9b8dcac4ed8e88c14d9bb04e369dad6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga22d6291f6aed29442cf4cd9098fa0784"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_t_e_x___private___macros.html#ga22d6291f6aed29442cf4cd9098fa0784">IS_SYSTICK_CLK_SOURCE</a>(SOURCE)</td></tr>
 <tr class="separator:ga22d6291f6aed29442cf4cd9098fa0784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6569304a39fe4f91bd59b6a586c8ede9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_t_e_x___private___macros.html#ga6569304a39fe4f91bd59b6a586c8ede9">IS_NVIC_PRIORITY_GROUP</a>(GROUP)</td></tr>
+<tr class="separator:ga6569304a39fe4f91bd59b6a586c8ede9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf30fd8f5960c2e28a772d8f16bb156dd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_t_e_x___private___macros.html#gaf30fd8f5960c2e28a772d8f16bb156dd">IS_NVIC_PREEMPTION_PRIORITY</a>(PRIORITY)&#160;&#160;&#160;((PRIORITY) &lt; 0x10U)</td></tr>
+<tr class="separator:gaf30fd8f5960c2e28a772d8f16bb156dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga010705bc997dcff935b965b372cba61d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_t_e_x___private___macros.html#ga010705bc997dcff935b965b372cba61d">IS_NVIC_SUB_PRIORITY</a>(PRIORITY)&#160;&#160;&#160;((PRIORITY) &lt; 0x10U)</td></tr>
+<tr class="separator:ga010705bc997dcff935b965b372cba61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b8dcac4ed8e88c14d9bb04e369dad6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_t_e_x___private___macros.html#ga9b8dcac4ed8e88c14d9bb04e369dad6a">IS_NVIC_DEVICE_IRQ</a>(IRQ)&#160;&#160;&#160;((IRQ) &gt;= (<a class="el" href="group___peripheral__interrupt__number__definition.html#ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</a>)0x00U)</td></tr>
+<tr class="separator:ga9b8dcac4ed8e88c14d9bb04e369dad6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22d6291f6aed29442cf4cd9098fa0784"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_t_e_x___private___macros.html#ga22d6291f6aed29442cf4cd9098fa0784">IS_SYSTICK_CLK_SOURCE</a>(SOURCE)</td></tr>
+<tr class="separator:ga22d6291f6aed29442cf4cd9098fa0784"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga9b8dcac4ed8e88c14d9bb04e369dad6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9b8dcac4ed8e88c14d9bb04e369dad6a">&#9670;&nbsp;</a></span>IS_NVIC_DEVICE_IRQ</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b8dcac4ed8e88c14d9bb04e369dad6a">&#9670;&nbsp;</a></span>IS_NVIC_DEVICE_IRQ <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_NVIC_DEVICE_IRQ</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">IRQ</td><td>)</td>
+          <td>&#160;&#160;&#160;((IRQ) &gt;= (<a class="el" href="group___peripheral__interrupt__number__definition.html#ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</a>)0x00U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9b8dcac4ed8e88c14d9bb04e369dad6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b8dcac4ed8e88c14d9bb04e369dad6a">&#9670;&nbsp;</a></span>IS_NVIC_DEVICE_IRQ <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -111,7 +139,25 @@ Macros</h2></td></tr>
 </div>
 </div>
 <a id="gaf30fd8f5960c2e28a772d8f16bb156dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf30fd8f5960c2e28a772d8f16bb156dd">&#9670;&nbsp;</a></span>IS_NVIC_PREEMPTION_PRIORITY</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf30fd8f5960c2e28a772d8f16bb156dd">&#9670;&nbsp;</a></span>IS_NVIC_PREEMPTION_PRIORITY <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_NVIC_PREEMPTION_PRIORITY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PRIORITY</td><td>)</td>
+          <td>&#160;&#160;&#160;((PRIORITY) &lt; 0x10U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf30fd8f5960c2e28a772d8f16bb156dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf30fd8f5960c2e28a772d8f16bb156dd">&#9670;&nbsp;</a></span>IS_NVIC_PREEMPTION_PRIORITY <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -129,7 +175,7 @@ Macros</h2></td></tr>
 </div>
 </div>
 <a id="ga6569304a39fe4f91bd59b6a586c8ede9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6569304a39fe4f91bd59b6a586c8ede9">&#9670;&nbsp;</a></span>IS_NVIC_PRIORITY_GROUP</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6569304a39fe4f91bd59b6a586c8ede9">&#9670;&nbsp;</a></span>IS_NVIC_PRIORITY_GROUP <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,8 +202,49 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="ga6569304a39fe4f91bd59b6a586c8ede9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6569304a39fe4f91bd59b6a586c8ede9">&#9670;&nbsp;</a></span>IS_NVIC_PRIORITY_GROUP <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_NVIC_PRIORITY_GROUP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">GROUP</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                       (((GROUP) == <a class="code" href="group___c_o_r_t_e_x___preemption___priority___group.html#ga5e97dcff77680602c86e44f23f5ffa1a">NVIC_PRIORITYGROUP_0</a>) || \</div>
+<div class="line">                                       ((GROUP) == <a class="code" href="group___c_o_r_t_e_x___preemption___priority___group.html#ga702227137b010421c3a3b6434005a132">NVIC_PRIORITYGROUP_1</a>) || \</div>
+<div class="line">                                       ((GROUP) == <a class="code" href="group___c_o_r_t_e_x___preemption___priority___group.html#gaa43a3fd37850c120ce567ab2743d11b4">NVIC_PRIORITYGROUP_2</a>) || \</div>
+<div class="line">                                       ((GROUP) == <a class="code" href="group___c_o_r_t_e_x___preemption___priority___group.html#ga8ddb24962e6f0fc3273139d45d374b09">NVIC_PRIORITYGROUP_3</a>) || \</div>
+<div class="line">                                       ((GROUP) == <a class="code" href="group___c_o_r_t_e_x___preemption___priority___group.html#gae6eab9140204bc938255aa148e597c45">NVIC_PRIORITYGROUP_4</a>))</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ga010705bc997dcff935b965b372cba61d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga010705bc997dcff935b965b372cba61d">&#9670;&nbsp;</a></span>IS_NVIC_SUB_PRIORITY</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga010705bc997dcff935b965b372cba61d">&#9670;&nbsp;</a></span>IS_NVIC_SUB_PRIORITY <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_NVIC_SUB_PRIORITY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PRIORITY</td><td>)</td>
+          <td>&#160;&#160;&#160;((PRIORITY) &lt; 0x10U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga010705bc997dcff935b965b372cba61d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga010705bc997dcff935b965b372cba61d">&#9670;&nbsp;</a></span>IS_NVIC_SUB_PRIORITY <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +262,7 @@ Macros</h2></td></tr>
 </div>
 </div>
 <a id="ga22d6291f6aed29442cf4cd9098fa0784"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga22d6291f6aed29442cf4cd9098fa0784">&#9670;&nbsp;</a></span>IS_SYSTICK_CLK_SOURCE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga22d6291f6aed29442cf4cd9098fa0784">&#9670;&nbsp;</a></span>IS_SYSTICK_CLK_SOURCE <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,6 +280,26 @@ Macros</h2></td></tr>
 <div class="line">                                       ((SOURCE) == <a class="code" href="group___c_o_r_t_e_x___sys_tick__clock__source.html#ga1fd9b5bada2a8b2425a8523bc0fc7124">SYSTICK_CLKSOURCE_HCLK_DIV8</a>))</div>
 <div class="ttc" id="agroup___c_o_r_t_e_x___sys_tick__clock__source_html_ga1fd9b5bada2a8b2425a8523bc0fc7124"><div class="ttname"><a href="group___c_o_r_t_e_x___sys_tick__clock__source.html#ga1fd9b5bada2a8b2425a8523bc0fc7124">SYSTICK_CLKSOURCE_HCLK_DIV8</a></div><div class="ttdeci">#define SYSTICK_CLKSOURCE_HCLK_DIV8</div><div class="ttdef"><b>Definition:</b> stm32f4xx_hal_cortex.h:105</div></div>
 <div class="ttc" id="agroup___c_o_r_t_e_x___sys_tick__clock__source_html_ga6f6582df23b6fbc578325e453b9893b7"><div class="ttname"><a href="group___c_o_r_t_e_x___sys_tick__clock__source.html#ga6f6582df23b6fbc578325e453b9893b7">SYSTICK_CLKSOURCE_HCLK</a></div><div class="ttdeci">#define SYSTICK_CLKSOURCE_HCLK</div><div class="ttdef"><b>Definition:</b> stm32f4xx_hal_cortex.h:106</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga22d6291f6aed29442cf4cd9098fa0784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga22d6291f6aed29442cf4cd9098fa0784">&#9670;&nbsp;</a></span>IS_SYSTICK_CLK_SOURCE <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IS_SYSTICK_CLK_SOURCE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">SOURCE</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                       (((SOURCE) == <a class="code" href="group___c_o_r_t_e_x___sys_tick__clock__source.html#ga6f6582df23b6fbc578325e453b9893b7">SYSTICK_CLKSOURCE_HCLK</a>) || \</div>
+<div class="line">                                       ((SOURCE) == <a class="code" href="group___c_o_r_t_e_x___sys_tick__clock__source.html#ga1fd9b5bada2a8b2425a8523bc0fc7124">SYSTICK_CLKSOURCE_HCLK_DIV8</a>))</div>
 </div><!-- fragment -->
 </div>
 </div>

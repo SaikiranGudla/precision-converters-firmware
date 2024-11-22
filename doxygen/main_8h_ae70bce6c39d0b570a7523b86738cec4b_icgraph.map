@@ -1,6 +1,0 @@
-<map id="HAL_TIM_MspPostInit" name="HAL_TIM_MspPostInit">
-<area shape="rect" id="node1" title=" " alt="" coords="359,31,521,57"/>
-<area shape="rect" id="node2" href="$main_8h.html#ad1f9d42690163f73f73e5b820c81ca14" title="TIM1 Initialization Function." alt="" coords="200,5,311,32"/>
-<area shape="rect" id="node4" href="$main_8h.html#a4b8ff887fd3fdf26605e35927e4ff202" title="TIM2 Initialization Function." alt="" coords="200,56,311,83"/>
-<area shape="rect" id="node3" href="$ad405x__iio_2app_2app__config__stm32_8c.html#a7256d80c59f9d4eafcebc79f1b73ba72" title="Initialize the STM32 system peripherals." alt="" coords="5,31,152,57"/>
-</map>

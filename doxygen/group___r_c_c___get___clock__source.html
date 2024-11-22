@@ -88,11 +88,49 @@ Macros</h2></td></tr>
 <tr class="memitem:ga3ea1390f8124e2b3b8d53e95541d6e53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_c_c___get___clock__source.html#ga3ea1390f8124e2b3b8d53e95541d6e53">__HAL_RCC_GET_PLL_OSCSOURCE</a>()&#160;&#160;&#160;((uint32_t)(<a class="el" href="group___peripheral__declaration.html#ga74944438a086975793d26ae48d5882d4">RCC</a>-&gt;PLLCFGR &amp; <a class="el" href="group___peripheral___registers___bits___definition.html#ga92cb53ea81d2c47537eb217cc6659a2e">RCC_PLLCFGR_PLLSRC</a>))</td></tr>
 <tr class="memdesc:ga3ea1390f8124e2b3b8d53e95541d6e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to get the oscillator used as PLL clock source.  <a href="group___r_c_c___get___clock__source.html#ga3ea1390f8124e2b3b8d53e95541d6e53">More...</a><br /></td></tr>
 <tr class="separator:ga3ea1390f8124e2b3b8d53e95541d6e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32f72b8c5b7e97b415867c57f9fafed6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_c_c___get___clock__source.html#ga32f72b8c5b7e97b415867c57f9fafed6">__HAL_RCC_SYSCLK_CONFIG</a>(__RCC_SYSCLKSOURCE__)&#160;&#160;&#160;<a class="el" href="group___exported__macro.html#ga6553c99f510c3bab8cc0a91602053247">MODIFY_REG</a>(<a class="el" href="group___peripheral__declaration.html#ga74944438a086975793d26ae48d5882d4">RCC</a>-&gt;CFGR, <a class="el" href="group___peripheral___registers___bits___definition.html#ga0eea5e5f7743a7e8995b8beeb18355c1">RCC_CFGR_SW</a>, (__RCC_SYSCLKSOURCE__))</td></tr>
+<tr class="memdesc:ga32f72b8c5b7e97b415867c57f9fafed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to configure the system clock source.  <a href="group___r_c_c___get___clock__source.html#ga32f72b8c5b7e97b415867c57f9fafed6">More...</a><br /></td></tr>
+<tr class="separator:ga32f72b8c5b7e97b415867c57f9fafed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac99c2453d9e77c8b457acc0210e754c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_c_c___get___clock__source.html#gac99c2453d9e77c8b457acc0210e754c2">__HAL_RCC_GET_SYSCLK_SOURCE</a>()&#160;&#160;&#160;(<a class="el" href="group___peripheral__declaration.html#ga74944438a086975793d26ae48d5882d4">RCC</a>-&gt;CFGR &amp; <a class="el" href="group___peripheral___registers___bits___definition.html#ga15bf2269500dc97e137315f44aa015c9">RCC_CFGR_SWS</a>)</td></tr>
+<tr class="memdesc:gac99c2453d9e77c8b457acc0210e754c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to get the clock source used as system clock.  <a href="group___r_c_c___get___clock__source.html#gac99c2453d9e77c8b457acc0210e754c2">More...</a><br /></td></tr>
+<tr class="separator:gac99c2453d9e77c8b457acc0210e754c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3ea1390f8124e2b3b8d53e95541d6e53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_c_c___get___clock__source.html#ga3ea1390f8124e2b3b8d53e95541d6e53">__HAL_RCC_GET_PLL_OSCSOURCE</a>()&#160;&#160;&#160;((uint32_t)(<a class="el" href="group___peripheral__declaration.html#ga74944438a086975793d26ae48d5882d4">RCC</a>-&gt;PLLCFGR &amp; <a class="el" href="group___peripheral___registers___bits___definition.html#ga92cb53ea81d2c47537eb217cc6659a2e">RCC_PLLCFGR_PLLSRC</a>))</td></tr>
+<tr class="memdesc:ga3ea1390f8124e2b3b8d53e95541d6e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to get the oscillator used as PLL clock source.  <a href="group___r_c_c___get___clock__source.html#ga3ea1390f8124e2b3b8d53e95541d6e53">More...</a><br /></td></tr>
+<tr class="separator:ga3ea1390f8124e2b3b8d53e95541d6e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga3ea1390f8124e2b3b8d53e95541d6e53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3ea1390f8124e2b3b8d53e95541d6e53">&#9670;&nbsp;</a></span>__HAL_RCC_GET_PLL_OSCSOURCE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3ea1390f8124e2b3b8d53e95541d6e53">&#9670;&nbsp;</a></span>__HAL_RCC_GET_PLL_OSCSOURCE <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __HAL_RCC_GET_PLL_OSCSOURCE</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;((uint32_t)(<a class="el" href="group___peripheral__declaration.html#ga74944438a086975793d26ae48d5882d4">RCC</a>-&gt;PLLCFGR &amp; <a class="el" href="group___peripheral___registers___bits___definition.html#ga92cb53ea81d2c47537eb217cc6659a2e">RCC_PLLCFGR_PLLSRC</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Macro to get the oscillator used as PLL clock source. </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">The</td><td>oscillator used as PLL clock source. The returned value can be one of the following:<ul>
+<li>RCC_PLLSOURCE_HSI: HSI oscillator is used as PLL clock source.</li>
+<li>RCC_PLLSOURCE_HSE: HSE oscillator is used as PLL clock source. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3ea1390f8124e2b3b8d53e95541d6e53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3ea1390f8124e2b3b8d53e95541d6e53">&#9670;&nbsp;</a></span>__HAL_RCC_GET_PLL_OSCSOURCE <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -121,7 +159,38 @@ Macros</h2></td></tr>
 </div>
 </div>
 <a id="gac99c2453d9e77c8b457acc0210e754c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac99c2453d9e77c8b457acc0210e754c2">&#9670;&nbsp;</a></span>__HAL_RCC_GET_SYSCLK_SOURCE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac99c2453d9e77c8b457acc0210e754c2">&#9670;&nbsp;</a></span>__HAL_RCC_GET_SYSCLK_SOURCE <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __HAL_RCC_GET_SYSCLK_SOURCE</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="group___peripheral__declaration.html#ga74944438a086975793d26ae48d5882d4">RCC</a>-&gt;CFGR &amp; <a class="el" href="group___peripheral___registers___bits___definition.html#ga15bf2269500dc97e137315f44aa015c9">RCC_CFGR_SWS</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Macro to get the clock source used as system clock. </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">The</td><td>clock source used as system clock. The returned value can be one of the following:<ul>
+<li>RCC_SYSCLKSOURCE_STATUS_HSI: HSI used as system clock.</li>
+<li>RCC_SYSCLKSOURCE_STATUS_HSE: HSE used as system clock.</li>
+<li>RCC_SYSCLKSOURCE_STATUS_PLLCLK: PLL used as system clock.</li>
+<li>RCC_SYSCLKSOURCE_STATUS_PLLRCLK: PLLR used as system clock. This parameter is available only for STM32F446xx devices. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac99c2453d9e77c8b457acc0210e754c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac99c2453d9e77c8b457acc0210e754c2">&#9670;&nbsp;</a></span>__HAL_RCC_GET_SYSCLK_SOURCE <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -152,7 +221,39 @@ Macros</h2></td></tr>
 </div>
 </div>
 <a id="ga32f72b8c5b7e97b415867c57f9fafed6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga32f72b8c5b7e97b415867c57f9fafed6">&#9670;&nbsp;</a></span>__HAL_RCC_SYSCLK_CONFIG</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32f72b8c5b7e97b415867c57f9fafed6">&#9670;&nbsp;</a></span>__HAL_RCC_SYSCLK_CONFIG <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __HAL_RCC_SYSCLK_CONFIG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__RCC_SYSCLKSOURCE__</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="group___exported__macro.html#ga6553c99f510c3bab8cc0a91602053247">MODIFY_REG</a>(<a class="el" href="group___peripheral__declaration.html#ga74944438a086975793d26ae48d5882d4">RCC</a>-&gt;CFGR, <a class="el" href="group___peripheral___registers___bits___definition.html#ga0eea5e5f7743a7e8995b8beeb18355c1">RCC_CFGR_SW</a>, (__RCC_SYSCLKSOURCE__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Macro to configure the system clock source. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;strong&gt;RCC_SYSCLKSOURCE&lt;/strong&gt;</td><td>specifies the system clock source. This parameter can be one of the following values:<ul>
+<li>RCC_SYSCLKSOURCE_HSI: HSI oscillator is used as system clock source.</li>
+<li>RCC_SYSCLKSOURCE_HSE: HSE oscillator is used as system clock source.</li>
+<li>RCC_SYSCLKSOURCE_PLLCLK: PLL output is used as system clock source.</li>
+<li>RCC_SYSCLKSOURCE_PLLRCLK: PLLR output is used as system clock source. This parameter is available only for STM32F446xx devices. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga32f72b8c5b7e97b415867c57f9fafed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32f72b8c5b7e97b415867c57f9fafed6">&#9670;&nbsp;</a></span>__HAL_RCC_SYSCLK_CONFIG <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

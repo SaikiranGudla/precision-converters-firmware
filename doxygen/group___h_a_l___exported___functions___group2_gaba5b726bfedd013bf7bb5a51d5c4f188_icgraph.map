@@ -1,4 +1,4 @@
 <map id="HAL_IncTick" name="HAL_IncTick">
 <area shape="rect" id="node1" title="This function is called to increment a global variable &quot;uwTick&quot; used as application time base." alt="" coords="184,5,285,32"/>
-<area shape="rect" id="node2" href="$stm32f4xx__it_8h.html#ab5e09814056d617c521549e542639b7e" title="This function handles System tick timer." alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node2" href="$ad405x__iio_2_s_t_m32_2_core_2_inc_2stm32f4xx__it_8h.html#ab5e09814056d617c521549e542639b7e" title="This function handles System tick timer." alt="" coords="5,5,136,32"/>
 </map>

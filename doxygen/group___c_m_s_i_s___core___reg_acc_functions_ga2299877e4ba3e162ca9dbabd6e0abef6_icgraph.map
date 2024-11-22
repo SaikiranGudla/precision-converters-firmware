@@ -1,16 +1,6 @@
 <map id="__disable_irq" name="__disable_irq">
-<area shape="rect" id="node1" title="Disable IRQ Interrupts." alt="" coords="727,208,833,235"/>
-<area shape="rect" id="node2" href="$main_8h.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="568,208,679,235"/>
-<area shape="rect" id="node3" href="$group___s_p_i___exported___functions___group1.html#ga17f583be14b22caffa6c4e56dcd035ef" title="SPI MSP Initialization This function configures the hardware resources used in this example." alt="" coords="368,5,499,32"/>
-<area shape="rect" id="node4" href="$group___t_i_m___exported___functions___group1.html#ga818f4d5d1e2f417438d281b4ac9efb9c" title="TIM_Base MSP Initialization This function configures the hardware resources used in this example." alt="" coords="347,56,520,83"/>
-<area shape="rect" id="node5" href="$main_8h.html#ada6e763cfa4108a8d24cd27b75f2f489" title="I2C1 Initialization Function." alt="" coords="380,107,487,133"/>
-<area shape="rect" id="node7" href="$main_8h.html#af81398f9775695df0b172367651ca3e6" title="SPI1 Initialization Function." alt="" coords="380,309,487,336"/>
-<area shape="rect" id="node10" href="$main_8h.html#ad1f9d42690163f73f73e5b820c81ca14" title="TIM1 Initialization Function." alt="" coords="378,157,489,184"/>
-<area shape="rect" id="node11" href="$main_8h.html#a4b8ff887fd3fdf26605e35927e4ff202" title="TIM2 Initialization Function." alt="" coords="378,208,489,235"/>
-<area shape="rect" id="node12" href="$main_8h.html#a265aef7a46164094e791259bf59d9cb4" title="TIM8 Initialization Function." alt="" coords="378,259,489,285"/>
-<area shape="rect" id="node13" href="$main_8h.html#a0664dce420227295e70164b7a89f0771" title="UART5 Initialization Function." alt="" coords="373,360,494,387"/>
-<area shape="rect" id="node14" href="$ad405x__iio_2_s_t_m32_2_core_2_src_2main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="The application entry point." alt="" coords="356,411,511,437"/>
-<area shape="rect" id="node6" href="$ad405x__iio_2app_2app__config__stm32_8c.html#a7256d80c59f9d4eafcebc79f1b73ba72" title="Initialize the STM32 system peripherals." alt="" coords="152,183,299,209"/>
-<area shape="rect" id="node8" href="$ad355xr__iio_2app_2app__config__stm32_8c.html#a7256d80c59f9d4eafcebc79f1b73ba72" title="Initialize the STM32 system peripherals." alt="" coords="152,360,299,387"/>
-<area shape="rect" id="node9" href="$ad355xr__iio_2app_2app__config_8c.html#aba990e48bb1b87852ff6a375f0c2f655" title="Initialize the system peripherals." alt="" coords="5,360,104,387"/>
+<area shape="rect" id="node1" title="Disable IRQ Interrupts." alt="" coords="385,31,492,57"/>
+<area shape="rect" id="node2" href="$ad405x__iio_2_s_t_m32_2_core_2_inc_2main_8h.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="227,31,337,57"/>
+<area shape="rect" id="node3" href="$group___s_p_i___exported___functions___group1.html#ga17f583be14b22caffa6c4e56dcd035ef" title="SPI MSP Initialization This function configures the hardware resources used in this example." alt="" coords="27,5,157,32"/>
+<area shape="rect" id="node4" href="$group___t_i_m___exported___functions___group1.html#ga818f4d5d1e2f417438d281b4ac9efb9c" title="TIM_Base MSP Initialization This function configures the hardware resources used in this example." alt="" coords="5,56,179,83"/>
 </map>
