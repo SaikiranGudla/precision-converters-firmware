@@ -1,7 +1,7 @@
 {
     "ad405x_iio": {
       "serialport": "COM7",
-      "device_name": "AD4052",
+      "device_name": "DEV_AD4052",
       "platform_name": "SDP-K1",
       "serial_com_type": "USE_PHY_COM_PORT",
       "drive_path": "D:\\"
