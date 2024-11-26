@@ -43,92 +43,93 @@ jobs:
   #           echo "SUCCESS: No files needed formatting by astyle"
   #         fi
 
-  build:
-    runs-on: ubuntu-latest
-   # needs: [lint]
-    strategy:
-      matrix:
-        project:
-          - ad405x_iio
-         # - ad469x_iio
-         # - ltc2672_iio  
+# Commenting for faster tests
+  # build:
+  #   runs-on: ubuntu-latest
+  #  # needs: [lint]
+  #   strategy:
+  #     matrix:
+  #       project:
+  #         - ad405x_iio
+  #        # - ad469x_iio
+  #        # - ltc2672_iio  
           
-    # Pull the container from the private repository
-    container:
-      image: ghcr.io/noahp/stm32wba55-example:2024-08-01
-      #options: --user root
-      #credentials:
-       # username: ${{ secrets.ARTIFACT_USERNAME }}
-        #password: ${{ secrets.ARTIFACT_PASSWORD }}
+  #   # Pull the container from the private repository
+  #   container:
+  #     image: ghcr.io/noahp/stm32wba55-example:2024-08-01
+  #     #options: --user root
+  #     #credentials:
+  #      # username: ${{ secrets.ARTIFACT_USERNAME }}
+  #       #password: ${{ secrets.ARTIFACT_PASSWORD }}
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v4
+  #       with:
+  #         submodules: recursive
 
-      - name: Build project
-        run: |
+  #     - name: Build project
+  #       run: |
           
-          echo "Check pwd"
-          pwd
+  #         echo "Check pwd"
+  #         pwd
           
-          echo "Again pwd: ${PWD}"
+  #         echo "Again pwd: ${PWD}"
           
-          # Configure Git to mark the directory as safe
-          git config --global --add safe.directory "${PWD}"
+  #         # Configure Git to mark the directory as safe
+  #         git config --global --add safe.directory "${PWD}"
           
-          # Check contents of the root directory
-          echo "Listing root directory:"
-          ls -la /
+  #         # Check contents of the root directory
+  #         echo "Listing root directory:"
+  #         ls -la /
 
-          # Check contents of /opt directory
-          echo "Listing /opt directory:"
-          ls -la /opt
+  #         # Check contents of /opt directory
+  #         echo "Listing /opt directory:"
+  #         ls -la /opt
           
-          echo "Step commit id: ${{ env.COMMIT }}"
+  #         echo "Step commit id: ${{ env.COMMIT }}"
           
-          # Retrieve commit ID directly in this step
-          sh_id=$(git rev-parse --short HEAD)
-          echo "Commit ID: $sh_id"
+  #         # Retrieve commit ID directly in this step
+  #         sh_id=$(git rev-parse --short HEAD)
+  #         echo "Commit ID: $sh_id"
           
-          # Create warnings.log before build
-          touch ${{ matrix.project }}_warnings.log
-          touch ${{ matrix.project }}_specific_warnings.log
+  #         # Create warnings.log before build
+  #         touch ${{ matrix.project }}_warnings.log
+  #         touch ${{ matrix.project }}_specific_warnings.log
          
-          /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
-            -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
-            -data /tmp/stm-workspace \
-            -import "projects/${{ matrix.project }}/STM32"
+  #         /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
+  #           -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
+  #           -data /tmp/stm-workspace \
+  #           -import "projects/${{ matrix.project }}/STM32"
 
-          /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
-            -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
-            -data /tmp/stm-workspace \
-            -build ${{ matrix.project }}/Debug  \
-            -D FIRMWARE_VERSION=$sh_id \
-            2>&1 | grep -i 'warning' | tee -a ${{ matrix.project }}_warnings.log
+  #         /opt/st/stm32cubeide_1.16.0/stm32cubeide --launcher.suppressErrors -nosplash \
+  #           -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
+  #           -data /tmp/stm-workspace \
+  #           -build ${{ matrix.project }}/Debug  \
+  #           -D FIRMWARE_VERSION=$sh_id \
+  #           2>&1 | grep -i 'warning' | tee -a ${{ matrix.project }}_warnings.log
 
-      - name: Filter specific warnings
-        run: |
-          grep "projects/${{ matrix.project }}/app" ${{ matrix.project }}_warnings.log > ${{ matrix.project }}_specific_warnings.log
+  #     - name: Filter specific warnings
+  #       run: |
+  #         grep "projects/${{ matrix.project }}/app" ${{ matrix.project }}_warnings.log > ${{ matrix.project }}_specific_warnings.log
 
-      - name: Upload specific warnings log
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.project }}-specific-warnings-log
-          path: ${{ matrix.project }}_specific_warnings.log
+  #     - name: Upload specific warnings log
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: ${{ matrix.project }}-specific-warnings-log
+  #         path: ${{ matrix.project }}_specific_warnings.log
 
-      # - name: Upload warnings log
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: ${{ matrix.project }}-warnings-log
-      #     path: ${{ matrix.project }}_warnings.log
+  #     # - name: Upload warnings log
+  #     #   uses: actions/upload-artifact@v4
+  #     #   with:
+  #     #     name: ${{ matrix.project }}-warnings-log
+  #     #     path: ${{ matrix.project }}_warnings.log
           
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.project }}
-          path: projects/${{ matrix.project }}/STM32/Debug/${{ matrix.project }}.bin
+  #     - name: Upload artifacts
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: ${{ matrix.project }}
+  #         path: projects/${{ matrix.project }}/STM32/Debug/${{ matrix.project }}.bin
 
   test:
     runs-on: self-hosted
@@ -158,7 +159,8 @@ jobs:
 
     - name: Run tests
       run: |
-        bat "cd projects/${{ matrix.project }}/tests & pytest -c pytest.ini --serialport "COM7" --device_name "AD4052" --platform_name "SDP-K1" --serial_com_type "USE_PHY_COM_PORT""			
+        cd projects/${{ matrix.project }}/tests & pytest -c 
+        pytest.ini --serialport "COM7" --device_name "AD4052" --platform_name "SDP-K1" --serial_com_type "USE_PHY_COM_PORT"		
 
           
    
