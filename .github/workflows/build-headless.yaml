@@ -152,12 +152,13 @@ jobs:
 
     - name: Copy artifact to hardware drive
       run: |
-        echo "Programming the board:"
+        echo "Programming the board"
         copy .\build\${{ matrix.project }}.bin D:\
+        echo "Programmed the board"
 
-    # - name: Run tests
-    #   run: |
-    #     bat "cd projects/${projectName}/tests & pytest --rootdir=${WORKSPACE}\\projects\\${projectName}\\tests -c pytest.ini --serialport ${platformInfo["serialport"]} --device_name ${config.ACTIVE_DEVICE} --platform_name ${config.PLATFORM_NAME} --serial_com_type ${config.COM_TYPE}"			
+    - name: Run tests
+      run: |
+        bat "cd projects/${{ matrix.project }}/tests & pytest -c pytest.ini --serialport "COM7" --device_name "AD4052" --platform_name "SDP-K1" --serial_com_type "USE_PHY_COM_PORT""			
 
           
    
