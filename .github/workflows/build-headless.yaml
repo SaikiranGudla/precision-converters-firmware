@@ -153,7 +153,8 @@ jobs:
 
     - name: Read configuration from JSON
       id: config
-      shell: bash
+      shell: C:\Program Files\Git\bin\bash.exe
+      # shell: bash
       run: |
         config=$(jq -r '.${{ matrix.project }}' config.json)
         echo "::set-output name=serialport::$(echo $config | jq -r '.serialport')"
@@ -177,7 +178,8 @@ jobs:
     #     echo "Programmed the board"
 
     - name: Run tests
-      shell: bash
+      shell: C:\Program Files\Git\bin\bash.exe
+      # shell: bash
       run: |
         cd projects/${{ matrix.project }}/tests
         pytest -c pytest.ini --serialport "${{ steps.config.outputs.serialport }}" --device_name "${{ steps.config.outputs.device_name }}" --platform_name "${{ steps.config.outputs.platform_name }}" --serial_com_type "${{ steps.config.outputs.serial_com_type }}"
