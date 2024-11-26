@@ -159,8 +159,8 @@ jobs:
 
     - name: Run tests
       run: |
-        cd projects/${{ matrix.project }}/tests & pytest -c 
-        pytest.ini --serialport "COM7" --device_name "AD4052" --platform_name "SDP-K1" --serial_com_type "USE_PHY_COM_PORT"		
+        cd projects/${{ matrix.project }}/tests 
+        pytest -c pytest.ini --serialport "COM7" --device_name "AD4052" --platform_name "SDP-K1" --serial_com_type "USE_PHY_COM_PORT"		
 
           
    
