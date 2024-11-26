@@ -151,17 +151,27 @@ jobs:
     #     name: ${{ matrix.project }}
     #     path: ./build
 
+    # - name: Read configuration from JSON
+    #   id: config
+    #   shell: C:\Program Files\Git\bin\bash.exe
+    #   # shell: bash
+    #   run: |
+    #     config=$(jq -r '.${{ matrix.project }}' config.json)
+    #     echo "::set-output name=serialport::$(echo $config | jq -r '.serialport')"
+    #     echo "::set-output name=device_name::$(echo $config | jq -r '.device_name')"
+    #     echo "::set-output name=platform_name::$(echo $config | jq -r '.platform_name')"
+    #     echo "::set-output name=serial_com_type::$(echo $config | jq -r '.serial_com_type')"
+    #     echo "::set-output name=drive_path::$(echo $config | jq -r '.drive_path')"
+
     - name: Read configuration from JSON
       id: config
-      shell: C:\Program Files\Git\bin\bash.exe
-      # shell: bash
       run: |
-        config=$(jq -r '.${{ matrix.project }}' config.json)
-        echo "::set-output name=serialport::$(echo $config | jq -r '.serialport')"
-        echo "::set-output name=device_name::$(echo $config | jq -r '.device_name')"
-        echo "::set-output name=platform_name::$(echo $config | jq -r '.platform_name')"
-        echo "::set-output name=serial_com_type::$(echo $config | jq -r '.serial_com_type')"
-        echo "::set-output name=drive_path::$(echo $config | jq -r '.drive_path')"
+        $config = Get-Content config.json | ConvertFrom-Json | Select-Object -ExpandProperty ${{ matrix.project }}
+        echo "::set-output name=serialport::$($config.serialport)"
+        echo "::set-output name=device_name::$($config.device_name)"
+        echo "::set-output name=platform_name::$($config.platform_name)"
+        echo "::set-output name=serial_com_type::$($config.serial_com_type)"
+      # add drive path too
 
     # - name: Copy artifact to hardware drive
     #   run: |
