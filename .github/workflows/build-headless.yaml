@@ -157,10 +157,33 @@ jobs:
     #     copy .\build\${{ matrix.project }}.bin D:\
     #     echo "Programmed the board"
 
+    # - name: Copy artifact to hardware drive
+    #   run: |
+    #     config=$(jq -r '.${{ matrix.project }}' config.json)
+    #     drive_path=$(echo $config | jq -r '.drive_path')
+    #     echo "Programming the board"
+    #     copy .\build\${{ matrix.project }}.bin $drive_path
+    #     echo "Programmed the board"
+
+    - name: Read configuration from JSON
+      id: config
+      run: |
+        config=$(jq -r '.${{ matrix.project }}' config.json)
+        echo "::set-output name=serialport::$(echo $config | jq -r '.serialport')"
+        echo "::set-output name=device_name::$(echo $config | jq -r '.device_name')"
+        echo "::set-output name=platform_name::$(echo $config | jq -r '.platform_name')"
+        echo "::set-output name=serial_com_type::$(echo $config | jq -r '.serial_com_type')"
+
     - name: Run tests
       run: |
-        cd projects/${{ matrix.project }}/tests 
-        pytest -c pytest.ini --serialport "COM7" --device_name "AD4052" --platform_name "SDP-K1" --serial_com_type "USE_PHY_COM_PORT"		
+        cd projects/${{ matrix.project }}/tests
+        pytest -c pytest.ini --serialport "${{ steps.config.outputs.serialport }}" --device_name "${{ steps.config.outputs.device_name }}" --platform_name "${{ steps.config.outputs.platform_name }}" --serial_com_type "${{ steps.config.outputs.serial_com_type }}"
+
+
+    # - name: Run tests
+    #   run: |
+    #     cd projects/${{ matrix.project }}/tests 
+    #     pytest -c pytest.ini --serialport "COM7" --device_name "AD4052" --platform_name "SDP-K1" --serial_com_type "USE_PHY_COM_PORT"		
 
           
    

@@ -1,0 +1,23 @@
+{
+    "ad405x_iio": {
+      "serialport": "COM7",
+      "device_name": "AD4052",
+      "platform_name": "SDP-K1",
+      "serial_com_type": "USE_PHY_COM_PORT",
+      "drive_path": "D:\\"
+    },
+    "ad469x_iio": {
+      "serialport": "COM8",
+      "device_name": "AD4692",
+      "platform_name": "SDP-K2",
+      "serial_com_type": "USE_USB_COM_PORT",
+      "drive_path": "E:\\"
+    },
+    "ltc2672_iio": {
+      "serialport": "COM9",
+      "device_name": "LTC2672",
+      "platform_name": "SDP-K3",
+      "serial_com_type": "USE_PHY_COM_PORT",
+      "drive_path": "F:\\"
+    }
+  }
