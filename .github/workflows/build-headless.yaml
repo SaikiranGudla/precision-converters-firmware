@@ -163,15 +163,26 @@ jobs:
     #     echo "::set-output name=serial_com_type::$(echo $config | jq -r '.serial_com_type')"
     #     echo "::set-output name=drive_path::$(echo $config | jq -r '.drive_path')"
 
+# works but depracated
+    # - name: Read configuration from JSON
+    #   id: config
+    #   run: |
+    #     $config = Get-Content config.json | ConvertFrom-Json | Select-Object -ExpandProperty ${{ matrix.project }}
+    #     echo "::set-output name=serialport::$($config.serialport)"
+    #     echo "::set-output name=device_name::$($config.device_name)"
+    #     echo "::set-output name=platform_name::$($config.platform_name)"
+    #     echo "::set-output name=serial_com_type::$($config.serial_com_type)"
+      # add drive path too
+
     - name: Read configuration from JSON
       id: config
       run: |
         $config = Get-Content config.json | ConvertFrom-Json | Select-Object -ExpandProperty ${{ matrix.project }}
-        echo "::set-output name=serialport::$($config.serialport)"
-        echo "::set-output name=device_name::$($config.device_name)"
-        echo "::set-output name=platform_name::$($config.platform_name)"
-        echo "::set-output name=serial_com_type::$($config.serial_com_type)"
-      # add drive path too
+        echo "serialport=$($config.serialport)" >> $env:GITHUB_ENV
+        echo "device_name=$($config.device_name)" >> $env:GITHUB_ENV
+        echo "platform_name=$($config.platform_name)" >> $env:GITHUB_ENV
+        echo "serial_com_type=$($config.serial_com_type)" >> $env:GITHUB_ENV
+        echo "drive_path=$($config.drive_path)" >> $env:GITHUB_ENV
 
     # - name: Copy artifact to hardware drive
     #   run: |
@@ -194,16 +205,21 @@ jobs:
     #     cd projects/${{ matrix.project }}/tests
     #     pytest -c pytest.ini --serialport "${{ steps.config.outputs.serialport }}" --device_name "${{ steps.config.outputs.device_name }}" --platform_name "${{ steps.config.outputs.platform_name }}" --serial_com_type "${{ steps.config.outputs.serial_com_type }}"
 
-    - name: Run tests
-      run: |
-        cd projects/${{ matrix.project }}/tests
-        pytest -c pytest.ini --serialport "${{ steps.config.outputs.serialport }}" --device_name "${{ steps.config.outputs.device_name }}" --platform_name "${{ steps.config.outputs.platform_name }}" --serial_com_type "${{ steps.config.outputs.serial_com_type }}"
+# works but depracated
+    # - name: Run tests
+    #   run: |
+    #     cd projects/${{ matrix.project }}/tests
+    #     pytest -c pytest.ini --serialport "${{ steps.config.outputs.serialport }}" --device_name "${{ steps.config.outputs.device_name }}" --platform_name "${{ steps.config.outputs.platform_name }}" --serial_com_type "${{ steps.config.outputs.serial_com_type }}"
 
     # - name: Run tests
     #   run: |
     #     cd projects/${{ matrix.project }}/tests 
     #     pytest -c pytest.ini --serialport "COM7" --device_name "AD4052" --platform_name "SDP-K1" --serial_com_type "USE_PHY_COM_PORT"		
 
+    - name: Run tests
+      run: |
+        cd projects/${{ matrix.project }}/tests
+        pytest -c pytest.ini --serialport "${{ env.serialport }}" --device_name "${{ env.device_name }}" --platform_name "${{ env.platform_name }}" --serial_com_type "${{ env.serial_com_type }}"
           
    
 
