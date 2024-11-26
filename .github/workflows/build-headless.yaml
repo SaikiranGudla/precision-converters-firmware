@@ -151,11 +151,11 @@ jobs:
     #     name: ${{ matrix.project }}
     #     path: ./build
 
-    - name: Copy artifact to hardware drive
-      run: |
-        echo "Programming the board"
-        copy .\build\${{ matrix.project }}.bin D:\
-        echo "Programmed the board"
+    # - name: Copy artifact to hardware drive
+    #   run: |
+    #     echo "Programming the board"
+    #     copy .\build\${{ matrix.project }}.bin D:\
+    #     echo "Programmed the board"
 
     - name: Run tests
       run: |
