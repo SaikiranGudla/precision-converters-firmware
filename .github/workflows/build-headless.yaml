@@ -147,7 +147,7 @@ jobs:
     - name: Download build artifacts
       uses: actions/download-artifact@v4
       with:
-        name: ${{ matrix.project }}-build
+        name: ${{ matrix.project }}
         path: ./build
 
     - name: Copy artifact to hardware drive
