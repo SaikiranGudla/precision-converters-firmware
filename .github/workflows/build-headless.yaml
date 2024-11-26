@@ -187,13 +187,17 @@ jobs:
     #     copy .\build\${{ matrix.project }}.bin $drive_path
     #     echo "Programmed the board"
 
+    # - name: Run tests
+    #   #shell: C:\Program Files\Git\bin\bash.exe
+    #   # shell: bash
+    #   run: |
+    #     cd projects/${{ matrix.project }}/tests
+    #     pytest -c pytest.ini --serialport "${{ steps.config.outputs.serialport }}" --device_name "${{ steps.config.outputs.device_name }}" --platform_name "${{ steps.config.outputs.platform_name }}" --serial_com_type "${{ steps.config.outputs.serial_com_type }}"
+
     - name: Run tests
-      shell: C:\Program Files\Git\bin\bash.exe
-      # shell: bash
       run: |
         cd projects/${{ matrix.project }}/tests
         pytest -c pytest.ini --serialport "${{ steps.config.outputs.serialport }}" --device_name "${{ steps.config.outputs.device_name }}" --platform_name "${{ steps.config.outputs.platform_name }}" --serial_com_type "${{ steps.config.outputs.serial_com_type }}"
-
 
     # - name: Run tests
     #   run: |
