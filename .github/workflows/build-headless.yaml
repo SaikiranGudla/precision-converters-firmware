@@ -51,7 +51,7 @@ jobs:
         project:
           - ad405x_iio
          # - ad469x_iio
-          - ltc2672_iio  
+         # - ltc2672_iio  
           
     # Pull the container from the private repository
     container:
@@ -118,14 +118,47 @@ jobs:
           name: ${{ matrix.project }}-specific-warnings-log
           path: ${{ matrix.project }}_specific_warnings.log
 
-      - name: Upload warnings log
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.project }}-warnings-log
-          path: ${{ matrix.project }}_warnings.log
+      # - name: Upload warnings log
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: ${{ matrix.project }}-warnings-log
+      #     path: ${{ matrix.project }}_warnings.log
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.project }}
           path: projects/${{ matrix.project }}/STM32/Debug/${{ matrix.project }}.bin
+
+  test:
+    runs-on: self-hosted
+    needs: build
+    strategy:
+      matrix:
+        project:
+          - ad405x_iio
+          # - ad469x_iio
+          # - ltc2672_iio
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: ${{ matrix.project }}-build
+        path: ./build
+
+    - name: Copy artifact to hardware drive
+      run: |
+        echo "Programming the board:"
+        copy .\build\${{ matrix.project }}.bin D:\
+
+    # - name: Run tests
+    #   run: |
+    #     bat "cd projects/${projectName}/tests & pytest --rootdir=${WORKSPACE}\\projects\\${projectName}\\tests -c pytest.ini --serialport ${platformInfo["serialport"]} --device_name ${config.ACTIVE_DEVICE} --platform_name ${config.PLATFORM_NAME} --serial_com_type ${config.COM_TYPE}"			
+
+          
+   
+
