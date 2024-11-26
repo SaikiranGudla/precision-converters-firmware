@@ -133,7 +133,7 @@ jobs:
 
   test:
     runs-on: self-hosted
-    needs: build
+    # needs: build
     strategy:
       matrix:
         project:
